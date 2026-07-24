@@ -90,6 +90,7 @@ Patreon support helps fund development time, testing, software, tools, and my br
 # Support me on Patreon
 
 Supporters may receive development updates, work-in-progress previews, technical breakdowns, polls, recognition, and optional testing opportunities when suitable builds are available.
+
 https://patreon.com/StrainuousAkisLounge?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink
 
 # Credits and thanks
