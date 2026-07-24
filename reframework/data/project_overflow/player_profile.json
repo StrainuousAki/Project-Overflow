@@ -1,0 +1,19 @@
+{
+    "attribute_points": 0,
+    "attributes": {
+        "dexterity": 1,
+        "intelligence": 1,
+        "luck": 1,
+        "strength": 1,
+        "vitality": 52
+    },
+    "experience": 562,
+    "health": {
+        "applied_vitality_bonus": 2550,
+        "base_max_hp": 2910,
+        "last_effective_max_hp": 5460
+    },
+    "level": 18,
+    "schema_version": 1,
+    "skill_points": 17
+}

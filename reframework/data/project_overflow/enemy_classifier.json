@@ -1,0 +1,79 @@
+{
+    "context=chainsaw.Ch1c0z1Context|parameter=chainsaw.Ch1c0z1Parameter|parameter_signature=chainsaw.Ch1c0z1Parameter | no whitelisted loadout members resolved": {
+        "base_xp": 250,
+        "confidence": 1.0,
+        "description": "Unidentified Appearance [000000E8]",
+        "display_name": "Red Zealot | Leader Zealot",
+        "elite_profile": "elite",
+        "family": "zealot",
+        "forced_elite_tier": "inherit",
+        "loot_table": "enemy_elite",
+        "source": "user_confirmed_runtime_fingerprint"
+    },
+    "context=chainsaw.Ch1c0z2Context|parameter=chainsaw.Ch1c0z2Parameter|parameter_signature=chainsaw.Ch1c0z2Parameter | no whitelisted loadout members resolved": {
+        "base_xp": 50,
+        "confidence": 1.0,
+        "description": "Unidentified Appearance [001608D4]",
+        "display_name": "Islander",
+        "elite_profile": "standard",
+        "family": "islander",
+        "forced_elite_tier": "inherit",
+        "loot_table": "enemy_standard",
+        "source": "user_confirmed_runtime_fingerprint"
+    },
+    "context=chainsaw.Ch1d6z0Context|parameter=chainsaw.EnemyCommonParameter|parameter_signature=chainsaw.EnemyCommonParameter | no whitelisted loadout members resolved": {
+        "base_xp": 500,
+        "confidence": 1.0,
+        "description": "Unidentified Appearance [000000E9]",
+        "display_name": "Royal Armor",
+        "elite_profile": "elite",
+        "family": "living_armor",
+        "forced_elite_tier": "inherit",
+        "loot_table": "enemy_elite",
+        "source": "user_confirmed_runtime_fingerprint"
+    },
+    "context=chainsaw.Ch1f0z0Context|parameter=chainsaw.EnemyCommonParameter|parameter_signature=chainsaw.EnemyCommonParameter | no whitelisted loadout members resolved": {
+        "base_xp": 1500,
+        "confidence": 1.0,
+        "description": "Unidentified Appearance [00440054]",
+        "display_name": "Armored El Gigante",
+        "elite_profile": "legendary",
+        "family": "bosses",
+        "forced_elite_tier": "inherit",
+        "loot_table": "enemy_legendary",
+        "source": "user_confirmed_runtime_fingerprint"
+    },
+    "context=chainsaw.Ch1f2z0Context|parameter=chainsaw.EnemyCommonParameter|parameter_signature=chainsaw.EnemyCommonParameter | no whitelisted loadout members resolved": {
+        "base_xp": 1000,
+        "confidence": 1.0,
+        "description": "Unidentified Appearance [00000076]",
+        "display_name": "Verdugo",
+        "elite_profile": "legendary",
+        "family": "bosses",
+        "forced_elite_tier": "inherit",
+        "loot_table": "enemy_legendary",
+        "source": "user_confirmed_runtime_fingerprint"
+    },
+    "context=chainsaw.Ch1f4z1Context|parameter=chainsaw.EnemyCommonParameter|parameter_signature=chainsaw.EnemyCommonParameter | no whitelisted loadout members resolved": {
+        "base_xp": 1000,
+        "confidence": 1.0,
+        "description": "Unidentified Appearance [001605D0]",
+        "display_name": "Mendéz | Centipede",
+        "elite_profile": "legendary",
+        "family": "bosses",
+        "forced_elite_tier": "inherit",
+        "loot_table": "enemy_legendary",
+        "source": "user_confirmed_runtime_fingerprint"
+    },
+    "context=chainsaw.Ch7k0z0Context|parameter=chainsaw.EnemyCommonParameter|parameter_signature=chainsaw.EnemyCommonParameter | no whitelisted loadout members resolved": {
+        "base_xp": 1000,
+        "confidence": 1.0,
+        "description": "Unidentified Appearance [002202A9]",
+        "display_name": "Super Salvador",
+        "elite_profile": "legendary",
+        "family": "bosses",
+        "forced_elite_tier": "inherit",
+        "loot_table": "enemy_legendary",
+        "source": "user_confirmed_runtime_fingerprint"
+    }
+}

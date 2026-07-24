@@ -1,0 +1,1025 @@
+Project: Overflow
+Resident Evil 4 Remake RPG Framework
+Alpha 0.2.0 — Build 49.78
+
+First release candidate initialization:
+- Native death hooks install during framework startup.
+- Enemy reward subscriptions initialize before frame callbacks.
+- Confirmed enemy deaths grant resolved XP by default.
+- Death-hook installation retries safely when RE Engine types load late.
+- The delayed XP gain segment uses a solid configured color.
+
+Data path consolidation:
+- All packaged runtime data now lives under data/project_overflow/.
+- Removed the invalid nested data/reframework/data/project_overflow/ tree.
+
+Runtime history limit:
+- Recent enemy-death history is a rolling queue capped at 10 records.
+- The oldest retained death is discarded when a new record exceeds the cap.
+- Lifetime kill, hook-call, duplicate, and reward counters are unaffected.
+
+XP HUD visibility:
+- The XP ring now requires a confirmed visible native HP bar.
+- Unknown/loading/menu visibility states keep the XP ring hidden.
+- Manual XP preview remains available from the developer controls.
+
+Progression menu visibility:
+- The progression panel now requires the native attaché-case Items step.
+- AttacheCaseManager busy state alone no longer opens the panel.
+- Save menus and adjacent busy screens remain hidden.
+
+Autosave profile correction:
+- Save-menu cursor index 0 is no longer misclassified as manual slot 01.
+- The selected row is compared with the native autosave row before manual mapping.
+- Renamed profile files repair stale embedded slot_key values when loaded.
+- Stale active_save.json markers no longer block a valid native slot load.
+
+Profile recovery UI:
+- Recovery slot 0 selects the autosave profile.
+- Recovery slots 1-20 select manual save profiles.
+- The resolved recovery target is shown before loading.
+
+Inventory opening visibility:
+- Concrete Items controls provide a short visibility heartbeat.
+- The progression panel fades in during inventory opening before Step.Move.
+- Save and storage screens remain hidden because manager busy state alone is insufficient.
+
+Debug attribute distribution:
+- Debug attribute additions are now queued instead of spent immediately.
+- Confirm Distribution commits all pending additions.
+- Cancel Pending discards the queue without changing the profile.
+- Committed-point refunds remain explicit immediate recovery actions.
+
+Typewriter/save/storage visibility:
+- Only concrete inventory icon controls can create an opening heartbeat.
+- Generic case draw/update callbacks no longer count as Items activity.
+- Every native case step other than Step.Move clears progression visibility immediately.
+
+Visibility rollback:
+- Reverted the Build 48.41 typewriter visibility isolation.
+- Restored the Build 48.40 inventory progression lifecycle.
+- Attribute confirmation and autosave fixes remain included.
+
+Inventory-only progression visibility:
+- The panel requires a live CaseCustomMenu Items step or a fresh concrete item-icon heartbeat.
+- Retained items_screen_visible state is no longer trusted.
+- Generic case callbacks cannot open the panel.
+- Typewriter, save, storage, and other non-Items screens remain hidden.
+
+Inventory flicker fix:
+- Step.Move now starts a latched Items session.
+- Temporary CurrStep read failures no longer hide the panel.
+- Every non-Items step and definitive close clears the session immediately.
+- Save, storage, and typewriter isolation remains intact.
+
+Inventory visibility cache:
+- Confirmed Step.Move refreshes the live Items cache.
+- Brief nil CurrStep reads are tolerated for 0.35 seconds.
+- Any confirmed non-Items step clears visibility immediately.
+- Inventory icon heartbeats still cover the opening transition.
+
+Inventory flicker removal:
+- Concrete inventory item-icon updates now own progression visibility.
+- CurrStep is no longer consulted every frame for rendering.
+- The icon heartbeat holds for 0.50 seconds between updates.
+- Save, storage, and typewriter screens remain hidden when item icons stop.
+
+Inventory visibility rollback:
+- Reverted the Build 48.46 item-grid-only visibility authority.
+- Restored the Build 48.45 visibility implementation because the concrete
+  icon hook does not fire reliably on this RE4/REFramework build.
+- No new visibility heuristic was added.
+
+Stable inventory-mode visibility:
+- Items inventory enum is learned only from confirmed Items callbacks.
+- Generic case callbacks can no longer overwrite it with save/typewriter/storage modes.
+- CurrActiveInventory exact matching now drives stable visibility.
+- CurrStep is no longer the primary per-frame visibility signal.
+
+Visibility diagnostic rollback:
+- Restored the Build 48.47 visibility implementation so the panel appears again.
+- Added a bounded 20-entry transition log for busy, step, active inventory, learned Items mode, visibility, and heartbeat.
+- No new visibility gate was added.
+
+Visibility diagnostics compatibility:
+- Replaced unconditional imgui.text_wrapped with a text fallback.
+- Added explicit CurrStep and CurrActiveInventory read-status diagnostics.
+- Visibility behavior remains unchanged from Build 48.49.
+
+Inventory-session visibility:
+- CurrStep removed completely from visibility; it is an animation cycle.
+- updateItemIcon, updateTargetItem, onSelectionChanged, and concrete icon updates start a latched Items session.
+- The session remains visible without flicker until lifecycle or manager close.
+- changeStep is diagnostics-only.
+
+Inventory controller setup session:
+- CaseCustomMenuGuiBehavior.setup/onSetup now start the latched Items session.
+- Concrete item callbacks remain supported but are no longer required.
+- CurrStep remains diagnostics-only and cannot flicker visibility.
+- Diagnostics now show Items Session Active and Items Session Source.
+
+Exact inventory hooks:
+- Added exact TDB signatures for onSelectionChanged and updateTargetItem.
+- Added receiveGuiParam(OpenParam) as an inventory-session start callback.
+- CurrActiveInventory and CurrStep getters now try exact () signatures first.
+- CurrStep remains disconnected from visibility.
+
+Draw-owned inventory visibility:
+- CaseCustomMenuGuiBehavior.draw() now refreshes a 0.20-second visibility heartbeat.
+- Generic update/render callbacks remain excluded from Items visibility.
+- CurrStep remains diagnostics-only.
+- The panel no longer depends on setup, item-icon, or selection callbacks that do not fire on this runtime.
+
+Explicit non-inventory blockers:
+- AttacheCaseManager busy is now the positive visibility signal.
+- SaveLoadMenuGuiBehavior explicitly blocks typewriter/save screens.
+- GmItemBox explicitly blocks storage.
+- CurrStep, CurrActiveInventory, and dead CaseCustomMenu callbacks are not used for visibility.
+
+Exit-latch lifecycle fix:
+- requestExitAttacheCaseLight now suppresses visibility only for a 0.45-second close-animation window.
+- The latch expires automatically even when AttacheCaseManager never reports a clean false edge.
+- Force Visible clears the latch and forces fade/input state to fully active.
+- Definitive manager close clears all exit state immediately.
+
+Edge-triggered exit latch:
+- Repeated requestExitAttacheCaseLight calls no longer refresh the close timer.
+- The first request disarms the latch until expiry or a successful reopen.
+- Expired exit state is cleared both during visibility polling and immediately before drawing.
+- Diagnostics now show latch armed state and generation.
+
+Blocker false-positive fix:
+- Removed SaveLoadMenuGuiBehavior setup/onSetup blocker hooks.
+- Save/typewriter blocking now begins only at onStartOpen.
+- Storage blocking now uses only openItemBox and onCloseItemBox.
+- Force Visible clears stale native menu blockers.
+- Added a Clear Native Menu Blockers recovery button.
+
+Force Visible interaction:
+- Force Visible now reads the ImGui mouse directly on every frame.
+- It no longer depends on native inventory cursor samples or native click forwarding.
+- Occasional native-input handoff frames can no longer make the forced panel non-interactive.
+
+Windowed cursor source fix:
+- Recently moving ImGui window coordinates now override stale native cursor coordinates globally.
+- ImGui no longer has to already be inside the progression panel before becoming authoritative.
+- Native cursor scaling remains only as a fallback when ImGui stops updating.
+- Added cursor-pair error and source-switch diagnostics.
+
+Native blocker lifecycle fix:
+- Removed the unsafe Clear Native Menu Blockers button.
+- Force Visible no longer changes save/storage blocker state.
+- Save/storage blocker counters are edge-triggered instead of incrementing every callback frame.
+- A definitive AttacheCaseManager close clears all native blockers automatically.
+
+Storage/typewriter blocker heartbeat:
+- GmItemBox.openItemBox now refreshes a 0.15-second blocker heartbeat.
+- The blocker remains active while typewriter/storage calls continue.
+- Returning to normal inventory clears automatically when calls stop.
+- Transient AttacheCaseManager close edges no longer clear the blocker mid-screen.
+
+Inventory-only stability gate:
+- Storage/typewriter blocker heartbeat extended to 1.00 second.
+- Progression now requires 0.25 seconds of continuously unblocked state before appearing.
+- Any blocker callback resets the stability timer immediately.
+- This removes the gap where AttacheCaseManager became busy before the blocker callback arrived.
+
+Visibility timing rollback:
+- Reverted the Build 48.63 0.25-second unblocked stability delay.
+- Restored the original fade-in timing from Build 48.62.
+- The GmItemBox signal is no longer treated as sufficient proof of storage,
+  because runtime captures show it also executes outside the storage screen.
+- No replacement visibility heuristic was added.
+
+Diagnostics and save-slot correction:
+- Fixed ui/rpg.lua comparing nil unblocked_since against a number.
+- Manual save-menu indices are now treated as zero-based GUI indices.
+- Captured displayed manual slot takes precedence over raw completion values.
+- Saving to displayed slot 09 now targets player_profile_slot_09.json.
+
+Native-save and screen-specific blocker fix:
+- Native save completion now queues the RPG profile write for five frames later.
+- The deferred write captures the entire live RPG profile at execution time.
+- Save-screen suppression uses SaveLoadMenuGuiBehavior.draw().
+- Storage suppression uses exact onOpenItemBox/onOpenItemBoxSub and close methods.
+- Generic GmItemBox.openItemBox is no longer used as a blocker.
+
+Stable visibility rollback and slot mapping:
+- Build 48.67 ItemWindow hooks were not carried forward because that build
+  crashed the game.
+- Visibility remains on the Build 48.66 implementation.
+- Manual save/load indices are now treated as already 1-based.
+- Visible slot 09 maps directly to player_profile_slot_09.json.
+- Raw completion values cannot apply an additional +1 translation.
+
+Native SaveDataManager autosave synchronization:
+- Hooked share.SaveDataManager.enqueueSaveRequest(System.Int32, SaveLoadRequestArgs).
+- Native slot ID 0 queues player_profile_autosave.json.
+- Autosave RPG writes occur 120 frames after the real native save request.
+- AutoSaveSetting.onHitAutoSave remains diagnostic-only and no longer writes early.
+- Manual completion writes still use the five-frame settled-profile path.
+
+Autosave/manual save isolation:
+- SaveDataManager.enqueueSaveRequest now handles autosave slot 0 only.
+- Manual request SlotId values no longer overwrite pending menu selections.
+- Manual saves remain owned by selectionChanged/updateScrollList plus the
+  native save-completion callback.
+- Autosave completion cannot consume a stale manual pending slot.
+
+Active-slot synchronization on native save:
+- Manual menu selection updates sync.active_slot immediately.
+- Native save completion selects and persists the resolved slot before queueing the RPG write.
+- Deferred save success reasserts sync.active_slot from rpg.active_save_slot().
+- Status now reports the active slot after the native profile write.
+
+Authoritative native request slot capture:
+- SaveDataManager.enqueueSaveRequest now captures manual slot IDs too.
+- Manual requests update pending_slot, sync.active_slot, and active_save.json.
+- Manual profile writes still wait for the native completion callback.
+- Completion falls back to the captured request slot when its event exposes no slot.
+- This fixes native slot 09 remaining autosave and skipping player_profile_slot_09.json.
+
+Operation-specific native slot mapping:
+- Save request slot 7 maps to displayed/profile slot 09 (+2).
+- Load request slot 10 maps to displayed/profile slot 09 (-1).
+- Hooked SaveDataManager.enqueueLoadRequest directly.
+- Save/load completion now prefers the captured request slot over event values.
+- Added separate last save-request and load-request raw-slot diagnostics.
+
+Corrected native load-row mapping:
+- Native load request raw 1 is autosave.
+- Native load request raw 2..21 maps to manual slots 01..20.
+- Raw 10 now maps to manual slot 09.
+- Save request mapping is unchanged.
+
+Native load transaction latch:
+- Save and load no longer share pending_slot state.
+- The first valid enqueueLoadRequest row is locked for the transaction.
+- Later internal load requests cannot overwrite autosave or manual slot identity.
+- onGameLoadCompleted consumes the locked request slot directly.
+- Added locked-slot and ignored-request diagnostics.
+
+Direct native SlotId mapping:
+- Removed all save/load offset mappings.
+- Native SlotId 0 maps to autosave.
+- Native SlotId 1..20 maps directly to manual slots 01..20.
+- SaveDataManager request hooks now resolve by method name and parameter count
+  when exact signature lookup fails.
+- Completion fallback remains secondary to request-captured SlotId.
+
+Lua syntax repair:
+- Removed a stale fragment from the previous load-offset normalizer.
+- The fragment left an unmatched `end` at game_save_sync.lua line 190.
+- Direct native SlotId behavior from Build 48.76 is otherwise unchanged.
+
+Single native slot convention:
+- SlotId 0 is autosave.
+- SlotId 1 through 20 are manual saves 01 through 20.
+- Save and load use the same direct mapping.
+- No offset or alternate slot ordering is applied.
+- Diagnostics separate raw SlotId values from resolved RPG slots.
+
+Transaction-owned slot identity:
+- selectionChanged/updateScrollList are now cursor diagnostics only.
+- Scrolling can no longer change pending_slot, active_slot, or queued profiles.
+- enqueueSaveRequest exclusively owns the pending save transaction slot.
+- enqueueLoadRequest exclusively owns the locked load transaction slot.
+- Diagnostics clearly separate menu cursor rows from transaction slots.
+
+Removed cyclic cursor hooks:
+- Removed 2 save-menu hook block(s) that called capture_menu_slot.
+- Autosave/slot wraparound cursor values can no longer reach save synchronization.
+- Slot identity is owned only by native save/load request and completion hooks.
+- Expected transaction-hook count is now 4.
+
+Completed-save slot resolution:
+- Native save completion now checks SaveDataManager slot fields.
+- Captured enqueueSaveRequest SlotId remains authoritative when present.
+- Completion-event slot data is only the final fallback.
+- RPG profile writes are skipped only when all three sources are unavailable.
+- Added completed-save slot/source diagnostics.
+
+SaveDataManager request-hook and completion fix:
+- enqueueSaveRequest/enqueueLoadRequest fallback matching no longer requires a
+  reflection parameter count.
+- Save completion now reads the actual share.SaveDataManager singleton instead
+  of SaveLoadMenuGuiManager.
+- CurrentProcess/CurrentRequest Request.SlotId is checked before guessed fields.
+- Added per-hook installation diagnostics.
+
+Sticky save/typewriter blocker:
+- Increased save-menu blocker grace from 0.20 seconds to 2.50 seconds.
+- Save-menu draw/input processing gaps no longer briefly expose progression.
+- Every native save-menu draw refreshes the session latch.
+- Added blocker state and remaining-grace diagnostics.
+
+Permanent save/typewriter session blocker:
+- Removed timer/grace ownership from the save blocker.
+- draw/setup/activate latch the blocker permanently.
+- input, confirmation, and submenu transitions cannot release it.
+- only native close/deactivate/destroy lifecycle callbacks clear the latch.
+- storage blocker behavior remains unchanged.
+
+Typewriter parent-menu blocker:
+- Added a blocker independent from the Save Game submenu blocker.
+- Typewriter parent setup/activate/draw latches progression suppression.
+- Parent close/deactivate/destroy releases only the typewriter latch.
+- Storage behavior is intentionally unchanged for the next isolated pass.
+
+Shared GmItemBox session blocker:
+- Added permanent item-box session blocking for both typewriter parent and storage.
+- Exact method signatures fall back to reflected method-name matching.
+- onOpenItemBox/onOpenItemBoxSub latch blocking.
+- onCloseItemBox/onCloseItemBoxSub release blocking.
+- Added item-box hook-resolution and lifecycle diagnostics.
+
+Recent enemy death UI nil guard:
+- Fixed Recent Deaths crashing when a fresh death record has no segment_id.
+- Stage and Segment now render independently with "unknown" fallbacks.
+- The incomplete death record remains visible for diagnostics.
+
+Recent enemy history event-shape fix:
+- Recent Deaths now reads enemy fields from event.snapshot.
+- Event metadata uses event.id and event.observation_key.
+- Reward fields can fall back to event.reward.
+- Older flattened history entries remain supported.
+- Missing values render as "unknown" instead of nil.
+
+All GmItemBox lifecycle hooks:
+- Fixed the blocker resolving only one open and one close method.
+- Hooks every reflected openItemBox/onOpenItemBox/onOpenItemBoxSub variant.
+- Hooks every reflected closeItemBox/onCloseItemBox/onCloseItemBoxSub variant.
+- Exact signature fallbacks remain for omitted inherited/generated methods.
+- Added hook counts and last-fired method diagnostics.
+
+GmItemBox blocker rollback:
+- Confirmed GmItemBox lifecycle is shared with the normal inventory screen.
+- Removed GmItemBox and legacy storage heartbeat state from visibility blocking.
+- Restored progression visibility on the attaché-case Items screen.
+- Kept every GmItemBox lifecycle hook as diagnostic-only telemetry.
+- Save Game submenu blocking remains unchanged.
+
+Strong Items-screen proof:
+- AttacheCaseManager busy is no longer sufficient to show progression.
+- Visibility requires a recent inventory-specific render/grid heartbeat.
+- Typewriter and storage cannot satisfy this proof through shared GmItemBox.
+- Added strong heartbeat source and count diagnostics.
+
+GmItemBox ContextID probe:
+- Added a diagnostic hook for openItemBox(chainsaw.ContextID).
+- Captures raw ContextID without affecting visibility.
+- Added recvGmParam param_type/arg telemetry.
+- Existing GmItemBox lifecycle hooks remain diagnostic-only.
+
+Inventory-value sentinel guard:
+- Confirmed Charms reports active inventory -1.
+- Negative inventory values can no longer be learned as the Items inventory.
+- Strong Items heartbeats require a valid nonnegative active inventory.
+- Poll-time visibility requires the live inventory to match the learned Items value.
+- Non-Items pages now invalidate the Items heartbeat immediately.
+
+Inventory guard Lua scope repair:
+- Moved valid_inventory_value above apply_attache_case_visibility.
+- Earlier visibility code now resolves the helper as a local function.
+- Inventory sentinel and strong Items heartbeat behavior is otherwise unchanged.
+
+Concrete icon-grid Items proof:
+- Removed shared case draw, hover, target, and selection methods from strong
+  Items visibility proof.
+- Charms hover can no longer refresh progression visibility.
+- Strong proof now comes only from CaseCustomMenuIconControl.lateUpdate.
+- Every reflected lateUpdate overload is hooked with exact lookup fallbacks.
+- Increased icon-grid heartbeat tolerance to 0.75 seconds.
+
+Failed icon-grid visibility rollback:
+- Restored normal inventory progression visibility.
+- Strong/icon-grid heartbeat experiments are diagnostic-only.
+- Charms hover can no longer toggle visibility, eliminating the flicker path.
+- Save Game blocker remains authoritative and unchanged.
+- Added target item managed-type and selection argument probes.
+
+GmBase user-context probe:
+- Extended GmItemBox diagnostics to inspect GameObject user parameters.
+- Resolves chainsaw.GmBase from the user object.
+- Captures GmBase.get_ID() ContextID and get_Context() managed type.
+- Visibility remains unchanged until inventory/typewriter/storage identities are verified.
+
+CaseCustomMenu method probe:
+- Added diagnostic-only counters for draw/update/lateUpdate/updateOnActive/
+  lateUpdateOnActive/render/updateItemIcon/updateTargetItem/onSelectionChanged/
+  changeStep.
+- Added a reset button for clean per-screen snapshots.
+- No visibility behavior changes in this build.
+
+Verified Charms blocker:
+- Runtime method probe showed lateUpdateOnActive only on the Charms screen.
+- Added a dedicated continuous Charms heartbeat blocker.
+- updateItemIcon remains diagnostic because it is event-driven.
+- Normal inventory, typewriter, storage, and Save Game behavior are otherwise unchanged.
+
+GmItemBox method probe:
+- Added diagnostic-only per-method counters for openItemBox, onOpenItemBox,
+  onOpenItemBoxSub, onCloseItemBox, onCloseItemBoxSub, and recvGmParam.
+- Added a reset button for clean typewriter and storage snapshots.
+- Charms blocker remains active and unchanged.
+- No new typewriter/storage visibility behavior in this build.
+
+ItemBox probe refinement:
+- Runtime testing proved openItemBox runs continuously during gameplay and pauses in menus.
+- Removed openItemBox from menu lifecycle totals and last-method reporting.
+- Kept it as a separate ambient gameplay counter.
+- Typewriter/storage comparison now focuses on onOpen/onClose/Sub/recvGmParam methods.
+
+Direct typewriter blocker:
+- Added hooks for chainsaw.GmTypeWriter.initInteractTrigger.
+- The direct callback permanently latches the typewriter blocker.
+- Save/typewriter internal transitions cannot release it.
+- The latch clears only when AttacheCaseManager reports the workflow closed.
+- Storage behavior remains unchanged.
+
+Typewriter behavior-state blocker:
+- Added hooks for PlayerBehaviorTreeAction_MFSM_SetTypeWriterNoInterpolation.
+- onStart enables the typewriter blocker.
+- onEnd releases the typewriter blocker.
+- Previous GmTypeWriter and GmFlag hooks remain diagnostic-only.
+- Storage remains unchanged.
+
+Armoury GUI state probe:
+- Added diagnostic hooks for ArmouryGuiStateBase transitions/lifecycle.
+- Captures the active concrete state runtime type and next enum value.
+- Polls ArmouryGuiBehaviorHub CurrStep.
+- Added reset controls for clean inventory/typewriter/storage snapshots.
+- No visibility behavior changed.
+
+Armoury state-owned visibility:
+- Concrete ArmouryGuiState runtime classes now classify the active workflow.
+- Armoury* states block storage.
+- Select* and SaveLoadExit states block the typewriter parent.
+- AttacheCase* states restore normal inventory visibility.
+- CaseCustom* leaves Charms ownership to the verified Charms heartbeat.
+- SaveLoad* keeps the existing Save Game blocker authoritative.
+
+Verified Armoury state blockers:
+- Typewriter latches only from exact ArmouryGuiState_Close.
+- Storage latches only from exact ArmouryGuiState_ArmouryEnter.
+- Broad Armoury* and Select* classification was removed.
+- SaveLoad preserves the parent typewriter latch.
+- AttacheCase* clears both blockers and restores inventory.
+- CaseCustom* continues using the verified Charms blocker.
+
+Verified state counter repair:
+- Fixed nil arithmetic on the nonexistent storage_blocker_open_calls field.
+- Uses the established storage_open_calls diagnostic counter.
+- Storage/typewriter open counters increment only on inactive-to-active transitions.
+- Verified ArmouryGuiState blocker ownership is otherwise unchanged.
+
+Verified typewriter onInit entry:
+- Typewriter no longer triggers from every ArmouryGuiState_Close callback.
+- It now requires runtime type ArmouryGuiState_Close and lifecycle method onInit.
+- Storage remains exact ArmouryGuiState_ArmouryEnter.
+- All other verified blocker behavior remains unchanged.
+
+Verified typewriter behavior ownership:
+- Runtime counters proved behavior-tree onStart/onEnd fire for typewriter use.
+- Typewriter blocking now belongs only to onStart/onEnd.
+- ArmouryGuiState_Close is diagnostic-only and no longer controls visibility.
+- Storage remains owned by exact ArmouryGuiState_ArmouryEnter.
+
+Latched typewriter behavior blocker:
+- onStart now latches the typewriter blocker.
+- onEnd is treated as the end of the transition animation only.
+- onEnd no longer releases the blocker while the typewriter menu remains open.
+- The blocker releases when AttacheCaseManager reports the workflow closed.
+- Save Game transitions preserve the typewriter latch.
+
+Typewriter diagnostic status cleanup:
+- The working behavior-tree hook now owns Typewriter Hook Status.
+- The obsolete guessed parent-menu resolver has a separate legacy status.
+- A failed legacy resolver no longer makes the active blocker appear broken.
+- Typewriter visibility behavior is unchanged.
+
+Bidirectional typewriter transition resolution:
+- onStart now marks a pending typewriter transition instead of assuming entry.
+- onEnd resolves direction from the current AttacheCaseManager busy state.
+- busy at completion means the typewriter menu is open.
+- not busy at completion means the typewriter menu closed.
+- Armoury Screen Class/Source now follow the resolved state.
+
+Typewriter transition ownership:
+- onStart is now explicitly labeled as transition start, not confirmed entry.
+- typewriter_transition_pending is part of the persistent visibility blocker.
+- The panel remains hidden until onEnd resolves open versus closed.
+- onEnd plus AttacheCaseManager busy state remains the authoritative resolution.
+
+Typewriter onStart ownership rollback:
+- Runtime testing showed onStart does not correspond to a visible transition.
+- onStart is diagnostic-only and no longer blocks progression.
+- onEnd plus current AttacheCaseManager busy state remains the only behavior
+  resolution path for typewriter open versus closed.
+
+Armoury hub child-behavior probe:
+- CurrStep is retained as lifecycle telemetry only.
+- Polls typewriter, storage, Save Game, and case child behavior getters.
+- Records object existence, managed type, and get_Valid result when available.
+- No visibility behavior changed.
+
+Direct typewriter lifecycle and stat application repair:
+- ArmourySelectGuiBehavior.onStartOpen/onStartClose now own the typewriter blocker.
+- CurrStep is captured for lifecycle timing diagnostics.
+- Fixed native Dexterity multiplier being applied only to the knife channel.
+- Melee, reload-duration, and weapon-transition channels now use Dexterity action speed.
+- Agility now applies through native PlayerCommonParamUserData movement getters.
+- Disabled duplicate backing-field movement multiplication.
+- Fire-rate target is surfaced separately in equipment diagnostics.
+
+Menu visibility edge fix:
+- All confirmed menu blockers now zero both fade target and current fade alpha.
+- Typewriter close keeps progression hidden through its exit transition.
+- Save and Charms blockers use immediate alpha suppression.
+- Added direct ArmouryGuiBehavior.onStartOpen/onStartClose storage ownership.
+- Storage now hides progression on entry and remains hidden during close.
+
+Agility/Dexterity scope repair:
+- Forward-declared movement, fire-rate, and channel multiplier functions.
+- Fixed nil-global crashes from functions defined before their local declarations.
+- Native movement hooks now report the actual Agility multiplier and last
+  walk/run base/applied values.
+- Movement diagnostics distinguish "hook active" from "getter never fired."
+
+Agility live userdata capture:
+- Removed the dead critical.object movement fallback.
+- Captures chainsaw.PlayerCommonParamUserData through its managed singleton.
+- If movement getters fire, Agility applies through their return values.
+- If movement getters remain at zero, Agility applies directly to captured
+  walk/run backing fields using preserved native baselines.
+- Added capture source, attempts, field count, and application-mode diagnostics.
+
+Agility player-graph capture:
+- Removed the incorrect managed-singleton assumption for PlayerCommonParamUserData.
+- Performs a bounded object-graph search from the live player context.
+- Searches exact runtime type chainsaw.PlayerCommonParamUserData.
+- Scans at most once per second, depth 5, up to 600 managed objects.
+- Once captured, preserves native walk/run baselines and applies Agility directly
+  when movement getters remain unused.
+
+Action Speed player-context recovery:
+- Added a narrow PlayerCharacterContext.updateContextDataOnUpdatePhase hook.
+- Action Speed now captures its own live player context instead of depending
+  exclusively on shared health state.
+- Movement graph scanning uses the captured player as fallback.
+- Added player capture hook/call/status diagnostics.
+
+Direct movement userdata capture:
+- Hooks PlayerCommonParamUserData.onLoad directly.
+- Captures the exact userdata object containing walk/run speed fields.
+- Preserves native baselines before applying Agility.
+- Player graph scanning remains fallback-only.
+- Added onLoad hook installation and call diagnostics.
+
+Live movement userdata recovery:
+- PlayerCommonParamUserData.onLoad remains installed for future reloads.
+- Added exact-type sdk.get_managed_objects recovery for already-loaded userdata.
+- Scan runs once per second until captured.
+- Recovery no longer depends on Action Speed having a player pointer.
+- Player graph discovery remains final fallback only.
+
+Live movement getter capture:
+- Removed sdk.get_managed_objects recovery because this REFramework build does
+  not expose that API.
+- Added narrow capture-only hooks on PlayerCommonParamUserData movement-group
+  and movement-data accessors.
+- Any live accessor call captures the exact userdata object through its this
+  pointer.
+- PlayerCommonParamUserData.onLoad remains installed for future reloads.
+- Player graph discovery remains the final fallback.
+
+Live PlayerBodyUpdater movement speed:
+- Added updateMotionSpeed capture diagnostics.
+- Applies Agility to getNextMotionSpeed return values.
+- Captures the active PlayerBodyUpdater directly.
+- setMotionSpeedFromAction remains diagnostic-only to avoid double application.
+- Legacy PlayerCommonParamUserData capture paths remain available as fallback.
+
+Walk/run-only Agility gate:
+- getNextMotionSpeed is no longer multiplied unconditionally.
+- Agility applies only while PlayerBodyUpdater movement-direction fields show
+  active walk/run input.
+- Zero-input and non-locomotion motion speeds remain native.
+- Added gate state, reason, and direction-value diagnostics.
+
+Fire-rate and reload-speed progression:
+- Dexterity Fire Rate now reaches exactly x1.250 at attribute 250.
+- Agility now grants Reload Speed with the same x1.250 maximum.
+- The first invested point contributes +0.002.
+- Each later invested point contributes +0.001.
+- Reload duration uses the Agility reload-speed multiplier.
+- Inventory and developer diagnostics now display Reload Speed.
+
+Reload action-rate application:
+- Added narrow hooks for McApplyReloadSpeed and McApplyReloadSpeedAddBlend.
+- Applies Agility Reload Speed to _McReloadSpeedRate.
+- Preserves each action object's native rate.
+- Reapplies during update so live attribute changes remain synchronized.
+- Restores the native rate on action end.
+- Generic shared Motion objects remain untouched.
+
+Reload base-dispatch correction:
+- Derived MC start/update hooks were not the runtime dispatch path.
+- Added ApplyReloadSpeed and ApplyReloadSpeedAddBlend base classes.
+- Deduplicates inherited method handles before installing hooks.
+- Reads _McReloadSpeedRate from the actual derived runtime object.
+- Prevents duplicate inherited end hooks and misleading end-call counts.
+
+Reload debug duration reporting:
+- Displays native and applied reload action rates.
+- Computes normalized native/applied duration scales as inverse rate.
+- Displays applied duration as a percentage of native duration.
+- Displays duration reduction percentage.
+- Explicitly labels these as normalized estimates because the action does not
+  expose an absolute clip/frame duration.
+
+Reload-rate persistence:
+- Applies _McReloadSpeedRate before the original start/update callback.
+- Reapplies it after the original callback in case native code overwrites it.
+- Reads the field back after native execution.
+- Reports whether the applied rate actually persisted.
+- Tracks native overwrite occurrences.
+- Restores the native rate after the reload action ends.
+
+Reload action argument capture:
+- Reload lifecycle hooks no longer assume args[2] is the action object.
+- Scans hook arguments 1-8 for a managed runtime type containing ApplyReloadSpeed.
+- Rejects unrelated managed arguments before field access.
+- Reports the captured argument index, runtime type, and scan results.
+
+Reload-local motion application:
+- Base ApplyReloadSpeed actions do not expose _McReloadSpeedRate.
+- Falls back to the action-local _Motion object for those runtime classes.
+- Applies Agility Reload Speed only to layers owned by the reload action.
+- Preserves each native layer speed and restores it on end().
+- Shared PlayerEquipment Motion remains untouched.
+
+Direct Gun reload-speed application:
+- Hooks chainsaw.Gun.get_ReloadSpeedRate().
+- Multiplies the live equipped-weapon reload scalar by Agility Reload Speed.
+- Does not edit WeaponStructureParam, custom userdata, or animation layers.
+- Behavior-tree reload experiments remain diagnostic/fallback-only.
+- Separates the unused legacy ReloadLerpTime diagnostics from the live Gun
+  reload-rate channel.
+
+Single reload-speed application path:
+- Gun.get_ReloadSpeedRate is now authoritative.
+- Behavior-tree reload rate and local motion-layer writes are suppressed once
+  the direct Gun getter path is active.
+- Behavior-tree hooks remain diagnostic-only.
+- Prevents reload speed from being applied twice.
+
+Direct-only reload speed:
+- Behavior-tree reload hooks are permanently diagnostic-only.
+- They never write _McReloadSpeedRate or local Motion layer speeds.
+- Gun.get_ReloadSpeedRate is the sole Reload Speed application path.
+- First direct Gun call restores any legacy tracked rate/layer mutations.
+- Added cleanup-run and restored-value diagnostics.
+
+Derived-stat display cleanup:
+- Agility now displays Reload Time reduction instead of the internal speed
+  multiplier.
+- Reload Time reduction is calculated as 1 - (1 / reload speed multiplier).
+- Critical Chance now includes an explicit leading plus sign.
+- Gameplay formulas and applied values are unchanged.
+
+
+Build 49.65 maintenance audit:
+- Reviewed every Lua and Markdown file.
+- Added module classifications and compatibility/deprecation notes.
+- Preserved all existing runtime functionality and import paths.
+
+Inventory suppression forward declaration:
+- Fixed Charms blocker calling suppress_progression_immediately before its
+  local declaration.
+- Added a lexical forward declaration and assigned the later implementation
+  to that local.
+- No visibility logic or blocker behavior changed.
+
+Persistent storage blocker:
+- Added a storage_session_latched state owned by verified storage lifecycle.
+- ArmouryEnter and ArmouryGuiBehavior.onStartOpen latch the blocker.
+- ArmouryGuiBehavior.onStartClose and verified inventory return release it.
+- Short item-box heartbeat expiry can no longer clear an open storage session.
+- Generic AttacheCaseManager close transitions cannot release the latch.
+
+Movement multiplier forward declaration:
+- Fixed update_movement_fields() calling movement_multiplier() before the
+  local function variable entered lexical scope during save loading.
+- Moved the multiplier declaration cluster before movement field updates.
+- Multiplier implementations and movement behavior are unchanged.
+
+Native-load movement reset:
+- Restores tracked fallback movement fields to their captured native baselines
+  before a newly loaded save is reconciled.
+- Clears stale player context, PlayerBodyUpdater, userdata, field baselines,
+  and movement application caches.
+- Forces the loaded save to recapture fresh native movement values before
+  applying its own Agility multiplier.
+- Prevents movement speed from carrying between RPG save slots.
+
+Movement load-transition normalization:
+- Remembers the previous save's native base, applied speed, and multiplier.
+- Detects when PlayerBodyUpdater returns that exact stale applied result after
+  a different save loads.
+- Removes the previous multiplier before applying the newly selected profile.
+- Releases normalization automatically when the engine returns a fresh value.
+- Does not permanently force a fixed movement baseline.
+
+New-campaign RPG isolation:
+- Tracks extended periods with no live player after returning to the title
+  screen.
+- Continue and Load Game remain identified by native load requests.
+- A fresh player appearing after the title gap without a native load request
+  is classified as New Game.
+- Clears the previous active RPG slot and resets the profile before the new
+  campaign's first autosave.
+- Resets health, stat-application, movement, and queued-load state.
+ 
+Campaign initialization gate:
+- Resets the active RPG profile at the confirmed title-screen boundary.
+- Suspends stat application before a new campaign player exists.
+- New Game resumes only after its first native autosave request.
+- Continue/Load resumes only after the selected RPG profile is actually loaded.
+
+Character-save ownership binding:
+- Tracks the live player instance that owns the currently loaded RPG profile.
+- A different player instance accompanied by a native load request is treated
+  as Continue/Load Game.
+- A different player instance with no newer native load request is treated as
+  a newly created campaign character.
+- Resets defaults before that character's first autosave is selected or queued.
+- Binds the fresh default profile only after the character save initializes.
+
+Items-tab-only progression visibility:
+- Learns the Items inventory enum only from the concrete item-grid control.
+- Generic attaché-case callbacks can no longer classify the active tab.
+- Requires the live active-inventory enum to equal the learned Items enum.
+- Blocks Map, Treasures, Crafting, Files, and every other tab.
+- Native attaché-case mouse movement is input-only and can no longer force the
+  progression panel visible.
+
+Inventory progression visual rollback:
+- Restored the complete Build 49.47 inventory progression module.
+- Reinstates the previously working draw, fade, cursor, mouse heartbeat, and
+  attaché-case open behavior.
+- Removes the Build 49.48 active-inventory gating experiment.
+- No profile, save-slot, movement, reload, or new-game isolation logic changed.
+
+Treasure inventory blocker:
+- Adds an independent blocker for chainsaw.KeyTreasureInventoryGuiBehavior.
+- Uses onSetup/setup for immediate open suppression.
+- Uses lateUpdate/draw as a short heartbeat while the Treasures screen remains
+  active.
+- Uses closing/deactivate/finalize/clear/destroy callbacks to release it.
+- Does not modify the restored Build 49.47 renderer, fade, cursor, mouse, or
+  attaché-case open path.
+
+Native map blocker:
+- Adds an independent blocker for chainsaw.MapManager.
+- onMapStartOpen immediately suppresses progression.
+- isMapGuiOpen keeps the blocker synchronized with the native map state.
+- onMapClosed releases the blocker.
+- Does not modify progression drawing, fading, cursor, mouse, or attaché-case
+  opening behavior.
+
+Native Files-screen blocker:
+- Adds an independent blocker for chainsaw.FileManager.
+- changePhase reads the incoming FileManager.Phase immediately.
+- Any nonzero phase blocks progression; phase zero releases it.
+- onLateUpdate synchronizes CurrPhase while the Files GUI is active.
+- onDestroy clears the blocker.
+- Does not modify progression drawing, fading, cursor, mouse, or attaché-case
+  opening behavior.
+
+Native Crafting-screen blocker:
+- Adds an independent blocker for chainsaw.CraftWindowGuiBehavior.
+- setup/onSetup/receiveGuiParam suppress immediately.
+- changeStep synchronizes the native Crafting Step.
+- draw keeps the blocker alive while the Crafting GUI renders.
+- deactivate/finalize/clear/destroy release it.
+- Does not modify progression drawing, fading, cursor, mouse, or attaché-case
+  opening behavior.
+
+Emergency blocker rollback:
+- Removed the experimental KeyTreasureInventoryGuiBehavior blocker.
+- Removed the experimental MapManager blocker.
+- Removed the experimental FileManager blocker.
+- Removed the experimental CraftWindowGuiBehavior blocker.
+- Restored the exact Build 49.49 inventory_progression.lua.
+- Keeps the Build 49.47 character-save/new-game isolation and unrelated
+  gameplay systems intact.
+
+Safe Map polling blocker:
+- Adds no MapManager hooks.
+- Polls the MapManager singleton no faster than every 0.15 seconds.
+- Reads only isMapGuiOpen().
+- Lookup and property calls are wrapped in pcall.
+- Failures clear the cached manager and fail open without touching rendering.
+- The existing progression draw, fade, cursor, mouse, and open paths are
+  unchanged.
+
+Safe Files polling blocker:
+- Adds no FileManager hooks.
+- Polls the FileManager singleton no faster than every 0.15 seconds.
+- Reads only CurrPhase through get_CurrPhase.
+- Any nonzero phase is treated as the Files screen being active.
+- Lookup and property calls are wrapped in pcall.
+- Failures clear the cached manager and do not alter rendering.
+- The safe Map poll remains enabled.
+
+Files polling rollback:
+- Removed the FileManager CurrPhase poll.
+- CurrPhase remained nonzero outside the Files screen and blocked progression
+  on the Items screen.
+- Restored the exact validated Build 49.55 Map-only progression module.
+- Safe Map polling remains enabled.
+
+Safe Keys & Treasures polling blocker:
+- Adds no KeyTreasureInventoryGuiBehavior hooks.
+- Scans managed objects only while AttacheCaseManager already reports busy.
+- Scans no faster than every 0.30 seconds.
+- Reads only CurrStep from discovered objects.
+- Any discovered nonzero step blocks progression.
+- All type lookups, object scans, and property reads are protected.
+- The validated safe Map poll remains enabled.
+
+Keys & Treasures polling rollback:
+- Removed the KeyTreasureInventoryGuiBehavior managed-object scan.
+- Runtime testing showed that the GUI object and nonzero CurrStep persist
+  outside the Keys & Treasures screen.
+- Restored the exact validated Build 49.57 Map-only progression module.
+- Safe Map polling remains enabled.
+
+Safe current Item Window state blocker:
+- No ItemWindowGuiControlBehavior hooks.
+- Scans only while the attaché case is open, at most every 0.20 seconds.
+- Reads only the live _CurrState object and its runtime class name.
+- Blocks only KeyTreasure, KeyItem, and Treasure state classes.
+- Keeps the validated safe Map poll.
+
+Items-only progression visibility:
+- Requires a positively confirmed live Item Window Items state.
+- Allows ItemWindowGuiState_AttacheCase* states.
+- Excludes AttacheCaseCraft* and AttacheCaseExit.
+- Every other state fails closed.
+- Uses no new native hooks.
+
+Items whitelist rollback:
+- Removed the Build 49.61 positive Items-state whitelist.
+- Restored the exact Build 49.60 inventory progression module.
+- Safe Map polling remains enabled.
+
+Safe Item Window root-state whitelist:
+- Reads ItemWindowGuiControlBehavior.CurrRootState as the live
+  chainsaw.ItemWindowGuiState enum.
+- Resolves allowed AttacheCase enum values dynamically from static fields.
+- Allows normal AttacheCase item-management states.
+- Excludes Craft, Files, Map, Keys & Treasures, and exit states.
+- Uses no new native hooks.
+- If enum resolution or root-state reading fails, the gate bypasses instead of
+  hiding the real Items screen.
+
+Item Window diagnostic probe:
+- Removed the ineffective Build 49.63 root-state whitelist.
+- Restored the exact Build 49.59 Map-only visibility behavior.
+- Adds a non-controlling, hook-free Item Window probe.
+- Logs CurrRootState, CurrStateType, CurrStartType, CurrStep, and
+  BehaviorHub.CurrStep only when values change.
+- Probe values do not affect progression visibility.
+
+Visible Item Window probe:
+- Displays CurrRootState, CurrStateType, CurrStartType, CurrStep, and
+  BehaviorHub.CurrStep directly in the REFramework script UI.
+- Location: Player & Progression > Diagnostics >
+  Attache-Case Progression Panel > Item Window State Probe.
+- Does not rely on reframework/log.txt or logs.txt.
+- Probe values remain diagnostic-only and do not affect visibility.
+
+Items-only inventory progression:
+- Added isolated ui/item_window_menu_state.lua.
+- Reads the live ItemWindowGuiControlBehavior through
+  AppSingleton<HighwayGuiManager>.get_Instance().
+- Uses validated tab IDs:
+  Map 0, Items 1, Crafting 2, Keys & Treasures 3, Files 4.
+- Progression is visible only for Step.Move (8), main root state (17),
+  and Items focus tab (1).
+- Unknown and transition states fail closed.
+- No RPG save/load, profile, stat-application, or gameplay scripts changed.
+
+Equipped-charms Items whitelist:
+- The validated HighwayGuiManager Items signature now overrides a stale
+  CaseCustom/Charms heartbeat.
+- Charms still block progression unless the live Item Window controller
+  confirms Step.Move (8), main root state (17), and Items tab (1).
+- No RPG save/load, profile, stat-application, or gameplay scripts changed.
+
+Save-menu profile preservation:
+- A long missing-player interval now arms New Game detection instead of
+  immediately clearing the active RPG save slot.
+- Native save completion disarms that pending gap even when no SlotId is
+  exposed by the completion event.
+- New Game isolation still occurs on the first autosave only when both a
+  confirmed gap and a changed player identity are present.
+- Inventory Items/Charms whitelist remains unchanged.
+
+Enemy death callback repair:
+- Hooks every exposed EnemyManager.notifyDead overload instead of one guessed
+  overload.
+- Expands context argument discovery from args[2] through args[9].
+- Adds robust Boolean decoding for processed-death callbacks.
+- Installs processed-death fallbacks on CharacterContext and EnemyBaseContext
+  when available.
+- Every pre-hook explicitly returns CALL_ORIGINAL.
+- Inventory, save/profile, HUD, health, and stat scripts were not changed.
+
+Heal-preview overflow clamp:
+- Preview HealValue is clamped to the HP actually missing from the current
+  maximum, preventing excess healing from appearing on the next overflow bar.
+- The real recovery amount and Intelligence multiplier are unchanged.
+- Repeated inventory hovers recognize both modified and clamped cached values.
+- Enemy death, save/profile, inventory, and stat scripts were not changed.
+
+Exclusive heal-preview band ownership:
+- Projected HP at or below 2500 uses only the native HP-ring preview.
+- Projected HP above 2500 suppresses the native HealValue preview and uses
+  only Project: Overflow's preview renderer.
+- The complete effective heal is cached before native suppression so actual
+  healing and overlay preview math remain unchanged.
+- Enemy death, save/profile, inventory, and stat systems were not changed.
+
+Native-safe heal preview and 2520-HP visual bands:
+- Capcom's HealPreviewParam.HealValue is no longer rewritten.
+- Effective RPG healing is cached separately for the overflow renderer.
+- Native visual band is 0-2520.
+- Overflow bands are 2520-5040, 5040-7560, 7560-10080, and so on.
+- Overflow preview endpoints are clipped to the active band and cannot
+  duplicate the native preview or spill the full heal into the next ring.
+- Actual healing, Intelligence scaling, enemy deaths, save/profile,
+  inventory visibility, and stat application were not changed.
+
+Heal preview regression rollback:
+- Restored the exact health preview core, runtime, renderer, and context
+  implementation used before Build 49.70.
+- Removed all 49.70, 49.71, and 49.72 preview experiments.
+- Changed only the visual band size from 2500 to 2520 HP:
+  native 0-2520, overflow 2520-5040, 5040-7560, and so on.
+- Enemy death, inventory, save/profile, RPG progression, and stat application
+  remain from the current build and were not rolled back.
+
+Simplified heal-preview path:
+- Reads current HP and Max HP.
+- Applies the effective heal once and clamps to Max HP.
+- Leaves Capcom's HealPreviewParam untouched.
+- Native preview owns all projected HP through 2520.
+- Project: Overflow draws only the portion whose projected endpoint exceeds
+  2520, using the same 2520-HP band thresholds for every overflow ring.
+- Actual healing, Intelligence scaling, death tracking, save/profile,
+  inventory visibility, and stat application were not changed.
+
+Working heal-preview logic transplant:
+- Replaced only the current heal-preview reader with the supplied hp.lua logic.
+- Replaced only overflow_position/update_preview_state with the supplied
+  updater.lua logic.
+- Replaced only heal-preview geometry and projected-heal draw logic with the
+  supplied overlay.lua logic.
+- Removed the later Intelligence HealPreviewParam rewrite helper.
+- Preserved the current build and its 2520-HP visual thresholds.
+- No save/profile, inventory, enemy death, XP, RPG, stat, cursor, or unrelated
+  HUD systems were replaced.
+
+Ring background defaults:
+- Global overflow background alpha defaults to 100.
+- Every ring-style background alpha defaults to 100.
+- Automatic background unlock threshold is 2520 HP.
+- Heal-preview transplant from Build 49.75 is unchanged.
+- No gameplay, save/profile, inventory, XP, death, stat, or cursor logic changed.
+
+Native heal-preview start fix:
+- Restored Intelligence-aware native preview inputs.
+- CurrHitPoint is forced to the actual current HP, never projected HP.
+- HealValue uses the effective clamped heal.
+- CurrMaxHitPoint uses the actual current Max HP.
+- All three values are restored immediately after native preview().
+- Ring thresholds, background alpha defaults, death tracking, save/profile,
+  inventory, XP, RPG, stats, cursor, and unrelated HUD logic were untouched.
+
+Syntax hotfix:
+- Fixed the malformed local restore_stack declaration in health/core.lua.
+- No preview math, thresholds, backgrounds, gameplay, save/profile, inventory,
+  death tracking, XP, RPG, stats, cursor, or unrelated HUD logic changed.
+
+Native preview duplicate-start repair:
+- Fixed the remaining max-HP preview repair write that set CurrHitPoint to
+  projected_current_hp.
+- CurrHitPoint now always remains actual_current_hp; HealValue alone advances
+  the native preview endpoint.
+- This prevents the 2500/2520 HpUpValue discrepancy from shifting ordinary
+  healing previews forward.
+- No thresholds, backgrounds, runtime renderer, save/profile, inventory,
+  death tracking, XP, RPG, stats, cursor, or unrelated HUD logic changed.
