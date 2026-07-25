@@ -1,0 +1,5278 @@
+{
+    "200000": {
+        "appearance_schema_version": 3,
+        "appearances": [
+            {
+                "description": "Unidentified Appearance [0000006A]",
+                "enemy_ids": [
+                    "0000006A"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000077]",
+                "enemy_ids": [
+                    "00000077"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000078]",
+                "enemy_ids": [
+                    "00000078"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00160759]",
+                "enemy_ids": [
+                    "00160759"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0016075D]",
+                "enemy_ids": [
+                    "0016075D"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00160758]",
+                "enemy_ids": [
+                    "00160758"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0016075E]",
+                "enemy_ids": [
+                    "0016075E"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [001606D1]",
+                "enemy_ids": [
+                    "001606D1"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0016067D]",
+                "enemy_ids": [
+                    "0016067D"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [001608D9]",
+                "enemy_ids": [
+                    "001608D9"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00160820]",
+                "enemy_ids": [
+                    "00160820"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00160823]",
+                "enemy_ids": [
+                    "00160823"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00160821]",
+                "enemy_ids": [
+                    "00160821"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [001606F9]",
+                "enemy_ids": [
+                    "001606F9"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [001606F8]",
+                "enemy_ids": [
+                    "001606F8"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [001608DA]",
+                "enemy_ids": [
+                    "001608DA"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000079]",
+                "enemy_ids": [
+                    "00000079"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000007E]",
+                "enemy_ids": [
+                    "0000007E"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0016086B]",
+                "enemy_ids": [
+                    "0016086B"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000009C]",
+                "enemy_ids": [
+                    "0000009C"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [001607C6]",
+                "enemy_ids": [
+                    "001607C6"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [001607C7]",
+                "enemy_ids": [
+                    "001607C7"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [001607D4]",
+                "enemy_ids": [
+                    "001607D4"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000B3]",
+                "enemy_ids": [
+                    "000000B3"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [004401FB]",
+                "enemy_ids": [
+                    "004401FB"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00440227]",
+                "enemy_ids": [
+                    "00440227"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00440249]",
+                "enemy_ids": [
+                    "00440249"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [002201D4]",
+                "enemy_ids": [
+                    "002201D4"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000AF]",
+                "enemy_ids": [
+                    "000000AF"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000B2]",
+                "enemy_ids": [
+                    "000000B2"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000B0]",
+                "enemy_ids": [
+                    "000000B0"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00540070]",
+                "enemy_ids": [
+                    "00540070"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00540071]",
+                "enemy_ids": [
+                    "00540071"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00540072]",
+                "enemy_ids": [
+                    "00540072"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0054007E]",
+                "enemy_ids": [
+                    "0054007E"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00540073]",
+                "enemy_ids": [
+                    "00540073"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00540074]",
+                "enemy_ids": [
+                    "00540074"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00540075]",
+                "enemy_ids": [
+                    "00540075"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00540076]",
+                "enemy_ids": [
+                    "00540076"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00540077]",
+                "enemy_ids": [
+                    "00540077"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00540091]",
+                "enemy_ids": [
+                    "00540091"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00540078]",
+                "enemy_ids": [
+                    "00540078"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [005400A0]",
+                "enemy_ids": [
+                    "005400A0"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0054009E]",
+                "enemy_ids": [
+                    "0054009E"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0054005E]",
+                "enemy_ids": [
+                    "0054005E"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0054005F]",
+                "enemy_ids": [
+                    "0054005F"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00540099]",
+                "enemy_ids": [
+                    "00540099"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0054009A]",
+                "enemy_ids": [
+                    "0054009A"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0054009B]",
+                "enemy_ids": [
+                    "0054009B"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0054008D]",
+                "enemy_ids": [
+                    "0054008D"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00540067]",
+                "enemy_ids": [
+                    "00540067"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00540069]",
+                "enemy_ids": [
+                    "00540069"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00540068]",
+                "enemy_ids": [
+                    "00540068"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0054006B]",
+                "enemy_ids": [
+                    "0054006B"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0054008C]",
+                "enemy_ids": [
+                    "0054008C"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0054006A]",
+                "enemy_ids": [
+                    "0054006A"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0054006C]",
+                "enemy_ids": [
+                    "0054006C"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0016082C]",
+                "enemy_ids": [
+                    "0016082C"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00160663]",
+                "enemy_ids": [
+                    "00160663"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00160662]",
+                "enemy_ids": [
+                    "00160662"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [001606FE]",
+                "enemy_ids": [
+                    "001606FE"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [001608D8]",
+                "enemy_ids": [
+                    "001608D8"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [001608D1]",
+                "enemy_ids": [
+                    "001608D1"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [001608D0]",
+                "enemy_ids": [
+                    "001608D0"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [001608CF]",
+                "enemy_ids": [
+                    "001608CF"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0016066C]",
+                "enemy_ids": [
+                    "0016066C"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [001607D7]",
+                "enemy_ids": [
+                    "001607D7"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00160674]",
+                "enemy_ids": [
+                    "00160674"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00160819]",
+                "enemy_ids": [
+                    "00160819"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000C3]",
+                "enemy_ids": [
+                    "000000C3"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000C1]",
+                "enemy_ids": [
+                    "000000C1"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [001608E9]",
+                "enemy_ids": [
+                    "001608E9"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000C2]",
+                "enemy_ids": [
+                    "000000C2"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000C4]",
+                "enemy_ids": [
+                    "000000C4"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000CD]",
+                "enemy_ids": [
+                    "000000CD"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000CF]",
+                "enemy_ids": [
+                    "000000CF"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000CE]",
+                "enemy_ids": [
+                    "000000CE"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00220219]",
+                "enemy_ids": [
+                    "00220219"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000D7]",
+                "enemy_ids": [
+                    "000000D7"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000D9]",
+                "enemy_ids": [
+                    "000000D9"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000D6]",
+                "enemy_ids": [
+                    "000000D6"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000D8]",
+                "enemy_ids": [
+                    "000000D8"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000DD]",
+                "enemy_ids": [
+                    "000000DD"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000DE]",
+                "enemy_ids": [
+                    "000000DE"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000EB]",
+                "enemy_ids": [
+                    "000000EB"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [004401A4]",
+                "enemy_ids": [
+                    "004401A4"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000EA]",
+                "enemy_ids": [
+                    "000000EA"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00440135]",
+                "enemy_ids": [
+                    "00440135"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [004601EB]",
+                "enemy_ids": [
+                    "004601EB"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00440138]",
+                "enemy_ids": [
+                    "00440138"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [007A0021]",
+                "enemy_ids": [
+                    "007A0021"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000DA]",
+                "enemy_ids": [
+                    "000000DA"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000DC]",
+                "enemy_ids": [
+                    "000000DC"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000102]",
+                "enemy_ids": [
+                    "00000102"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000103]",
+                "enemy_ids": [
+                    "00000103"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000011A]",
+                "enemy_ids": [
+                    "0000011A"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000011C]",
+                "enemy_ids": [
+                    "0000011C"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [004601AE]",
+                "enemy_ids": [
+                    "004601AE"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000ED]",
+                "enemy_ids": [
+                    "000000ED"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000EC]",
+                "enemy_ids": [
+                    "000000EC"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000111]",
+                "enemy_ids": [
+                    "00000111"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000112]",
+                "enemy_ids": [
+                    "00000112"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000110]",
+                "enemy_ids": [
+                    "00000110"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000FA]",
+                "enemy_ids": [
+                    "000000FA"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [004600B9]",
+                "enemy_ids": [
+                    "004600B9"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [004600BF]",
+                "enemy_ids": [
+                    "004600BF"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [004600BA]",
+                "enemy_ids": [
+                    "004600BA"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000173]",
+                "enemy_ids": [
+                    "00000173"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000015D]",
+                "enemy_ids": [
+                    "0000015D"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00220203]",
+                "enemy_ids": [
+                    "00220203"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [004600C1]",
+                "enemy_ids": [
+                    "004600C1"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00440162]",
+                "enemy_ids": [
+                    "00440162"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [004600BC]",
+                "enemy_ids": [
+                    "004600BC"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [004601A0]",
+                "enemy_ids": [
+                    "004601A0"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [004601C9]",
+                "enemy_ids": [
+                    "004601C9"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [004601C8]",
+                "enemy_ids": [
+                    "004601C8"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [007A005C]",
+                "enemy_ids": [
+                    "007A005C"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [004600C7]",
+                "enemy_ids": [
+                    "004600C7"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [004601D8]",
+                "enemy_ids": [
+                    "004601D8"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [002202C7]",
+                "enemy_ids": [
+                    "002202C7"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [002201FE]",
+                "enemy_ids": [
+                    "002201FE"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [004601D9]",
+                "enemy_ids": [
+                    "004601D9"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [002202DC]",
+                "enemy_ids": [
+                    "002202DC"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [002202DF]",
+                "enemy_ids": [
+                    "002202DF"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00220249]",
+                "enemy_ids": [
+                    "00220249"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [007A00B4]",
+                "enemy_ids": [
+                    "007A00B4"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0022024A]",
+                "enemy_ids": [
+                    "0022024A"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000015B]",
+                "enemy_ids": [
+                    "0000015B"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000012E]",
+                "enemy_ids": [
+                    "0000012E"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0084000B]",
+                "enemy_ids": [
+                    "0084000B"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            }
+        ],
+        "base_xp": 20,
+        "display_name": "Ganado",
+        "elite_profile": "standard",
+        "family": "ganado",
+        "identified": true,
+        "loot_table": "enemy_standard"
+    },
+    "200001": {
+        "appearance_schema_version": 3,
+        "appearances": [
+            {
+                "description": "Unidentified Appearance [00000075]",
+                "enemy_ids": [
+                    "00000075"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000006D]",
+                "enemy_ids": [
+                    "0000006D"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000006C]",
+                "enemy_ids": [
+                    "0000006C"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000074]",
+                "enemy_ids": [
+                    "00000074"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00160766]",
+                "enemy_ids": [
+                    "00160766"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00160767]",
+                "enemy_ids": [
+                    "00160767"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00160777]",
+                "enemy_ids": [
+                    "00160777"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00160778]",
+                "enemy_ids": [
+                    "00160778"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [001606D7]",
+                "enemy_ids": [
+                    "001606D7"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [001606C6]",
+                "enemy_ids": [
+                    "001606C6"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0016030B]",
+                "enemy_ids": [
+                    "0016030B"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0016030F]",
+                "enemy_ids": [
+                    "0016030F"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0016030C]",
+                "enemy_ids": [
+                    "0016030C"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00160658]",
+                "enemy_ids": [
+                    "00160658"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [001603EB]",
+                "enemy_ids": [
+                    "001603EB"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [001606C9]",
+                "enemy_ids": [
+                    "001606C9"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [001606C8]",
+                "enemy_ids": [
+                    "001606C8"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [001606CB]",
+                "enemy_ids": [
+                    "001606CB"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [001608D5]",
+                "enemy_ids": [
+                    "001608D5"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [001603EC]",
+                "enemy_ids": [
+                    "001603EC"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [001606F5]",
+                "enemy_ids": [
+                    "001606F5"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [001603E9]",
+                "enemy_ids": [
+                    "001603E9"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [001606F6]",
+                "enemy_ids": [
+                    "001606F6"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [001606F4]",
+                "enemy_ids": [
+                    "001606F4"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [001606F3]",
+                "enemy_ids": [
+                    "001606F3"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [001606EB]",
+                "enemy_ids": [
+                    "001606EB"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0016088A]",
+                "enemy_ids": [
+                    "0016088A"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [001606F7]",
+                "enemy_ids": [
+                    "001606F7"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [001606F1]",
+                "enemy_ids": [
+                    "001606F1"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [001606F2]",
+                "enemy_ids": [
+                    "001606F2"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000081]",
+                "enemy_ids": [
+                    "00000081"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000082]",
+                "enemy_ids": [
+                    "00000082"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [001608E8]",
+                "enemy_ids": [
+                    "001608E8"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000009B]",
+                "enemy_ids": [
+                    "0000009B"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000009D]",
+                "enemy_ids": [
+                    "0000009D"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0016093C]",
+                "enemy_ids": [
+                    "0016093C"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0016093D]",
+                "enemy_ids": [
+                    "0016093D"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [001607AD]",
+                "enemy_ids": [
+                    "001607AD"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000AA]",
+                "enemy_ids": [
+                    "000000AA"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000A9]",
+                "enemy_ids": [
+                    "000000A9"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000A8]",
+                "enemy_ids": [
+                    "000000A8"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000AB]",
+                "enemy_ids": [
+                    "000000AB"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000B7]",
+                "enemy_ids": [
+                    "000000B7"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000B8]",
+                "enemy_ids": [
+                    "000000B8"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000B9]",
+                "enemy_ids": [
+                    "000000B9"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [004401F7]",
+                "enemy_ids": [
+                    "004401F7"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0044024C]",
+                "enemy_ids": [
+                    "0044024C"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0044024D]",
+                "enemy_ids": [
+                    "0044024D"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0044024E]",
+                "enemy_ids": [
+                    "0044024E"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0044024A]",
+                "enemy_ids": [
+                    "0044024A"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00440250]",
+                "enemy_ids": [
+                    "00440250"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [004401FC]",
+                "enemy_ids": [
+                    "004401FC"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0044024F]",
+                "enemy_ids": [
+                    "0044024F"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [002201D5]",
+                "enemy_ids": [
+                    "002201D5"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00440252]",
+                "enemy_ids": [
+                    "00440252"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00440253]",
+                "enemy_ids": [
+                    "00440253"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000B1]",
+                "enemy_ids": [
+                    "000000B1"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0016066D]",
+                "enemy_ids": [
+                    "0016066D"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00160677]",
+                "enemy_ids": [
+                    "00160677"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00160679]",
+                "enemy_ids": [
+                    "00160679"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [001607D8]",
+                "enemy_ids": [
+                    "001607D8"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [001609C8]",
+                "enemy_ids": [
+                    "001609C8"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [001606CC]",
+                "enemy_ids": [
+                    "001606CC"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00160672]",
+                "enemy_ids": [
+                    "00160672"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [001608EB]",
+                "enemy_ids": [
+                    "001608EB"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [001608EA]",
+                "enemy_ids": [
+                    "001608EA"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [001608ED]",
+                "enemy_ids": [
+                    "001608ED"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [001608EC]",
+                "enemy_ids": [
+                    "001608EC"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [001608EE]",
+                "enemy_ids": [
+                    "001608EE"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [001608EF]",
+                "enemy_ids": [
+                    "001608EF"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [001608F1]",
+                "enemy_ids": [
+                    "001608F1"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00160953]",
+                "enemy_ids": [
+                    "00160953"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00160954]",
+                "enemy_ids": [
+                    "00160954"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [001608F3]",
+                "enemy_ids": [
+                    "001608F3"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [001608FA]",
+                "enemy_ids": [
+                    "001608FA"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [001608F8]",
+                "enemy_ids": [
+                    "001608F8"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [001608F2]",
+                "enemy_ids": [
+                    "001608F2"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [001608F5]",
+                "enemy_ids": [
+                    "001608F5"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [001608FB]",
+                "enemy_ids": [
+                    "001608FB"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [001608FC]",
+                "enemy_ids": [
+                    "001608FC"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [001608FF]",
+                "enemy_ids": [
+                    "001608FF"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [001608FD]",
+                "enemy_ids": [
+                    "001608FD"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00160900]",
+                "enemy_ids": [
+                    "00160900"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [001608FE]",
+                "enemy_ids": [
+                    "001608FE"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [001606A4]",
+                "enemy_ids": [
+                    "001606A4"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000D3]",
+                "enemy_ids": [
+                    "000000D3"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000CC]",
+                "enemy_ids": [
+                    "000000CC"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0044011D]",
+                "enemy_ids": [
+                    "0044011D"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "base_xp_override": 250,
+                "description": "Unidentified Appearance [000000E8]",
+                "display_name_override": "Red Zealot | Leader Zealot",
+                "elite_profile_override": "elite",
+                "enemy_ids": [
+                    "000000E8"
+                ],
+                "family_override": "zealot",
+                "identified_override": true,
+                "identity_source": "manual",
+                "loot_table_override": "enemy_elite",
+                "user_confirmed": true
+            },
+            {
+                "description": "Unidentified Appearance [000000D4]",
+                "enemy_ids": [
+                    "000000D4"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000D5]",
+                "enemy_ids": [
+                    "000000D5"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [007A000C]",
+                "enemy_ids": [
+                    "007A000C"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [007A000E]",
+                "enemy_ids": [
+                    "007A000E"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [007A000D]",
+                "enemy_ids": [
+                    "007A000D"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0044012D]",
+                "enemy_ids": [
+                    "0044012D"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0044012A]",
+                "enemy_ids": [
+                    "0044012A"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00440129]",
+                "enemy_ids": [
+                    "00440129"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000E1]",
+                "enemy_ids": [
+                    "000000E1"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [006E0032]",
+                "enemy_ids": [
+                    "006E0032"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000E2]",
+                "enemy_ids": [
+                    "000000E2"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000E3]",
+                "enemy_ids": [
+                    "000000E3"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000E0]",
+                "enemy_ids": [
+                    "000000E0"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000DF]",
+                "enemy_ids": [
+                    "000000DF"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0044013E]",
+                "enemy_ids": [
+                    "0044013E"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [006E0021]",
+                "enemy_ids": [
+                    "006E0021"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000101]",
+                "enemy_ids": [
+                    "00000101"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000FF]",
+                "enemy_ids": [
+                    "000000FF"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000100]",
+                "enemy_ids": [
+                    "00000100"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000F5]",
+                "enemy_ids": [
+                    "000000F5"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000F6]",
+                "enemy_ids": [
+                    "000000F6"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000010E]",
+                "enemy_ids": [
+                    "0000010E"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000010F]",
+                "enemy_ids": [
+                    "0000010F"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000010D]",
+                "enemy_ids": [
+                    "0000010D"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [004600C0]",
+                "enemy_ids": [
+                    "004600C0"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00440165]",
+                "enemy_ids": [
+                    "00440165"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00440161]",
+                "enemy_ids": [
+                    "00440161"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0046012F]",
+                "enemy_ids": [
+                    "0046012F"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [004600E0]",
+                "enemy_ids": [
+                    "004600E0"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [004600E2]",
+                "enemy_ids": [
+                    "004600E2"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0022022F]",
+                "enemy_ids": [
+                    "0022022F"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [007A00B3]",
+                "enemy_ids": [
+                    "007A00B3"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [007A00B2]",
+                "enemy_ids": [
+                    "007A00B2"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [005400C0]",
+                "enemy_ids": [
+                    "005400C0"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [006E0059]",
+                "enemy_ids": [
+                    "006E0059"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000012A]",
+                "enemy_ids": [
+                    "0000012A"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000012B]",
+                "enemy_ids": [
+                    "0000012B"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000012F]",
+                "enemy_ids": [
+                    "0000012F"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000131]",
+                "enemy_ids": [
+                    "00000131"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000130]",
+                "enemy_ids": [
+                    "00000130"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [004401C3]",
+                "enemy_ids": [
+                    "004401C3"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0084000A]",
+                "enemy_ids": [
+                    "0084000A"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000013C]",
+                "enemy_ids": [
+                    "0000013C"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000013B]",
+                "enemy_ids": [
+                    "0000013B"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00460177]",
+                "enemy_ids": [
+                    "00460177"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00460176]",
+                "enemy_ids": [
+                    "00460176"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0046017C]",
+                "enemy_ids": [
+                    "0046017C"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00460178]",
+                "enemy_ids": [
+                    "00460178"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00460174]",
+                "enemy_ids": [
+                    "00460174"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0046017B]",
+                "enemy_ids": [
+                    "0046017B"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0046017A]",
+                "enemy_ids": [
+                    "0046017A"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            }
+        ],
+        "base_xp": 30,
+        "display_name": "Zealot",
+        "elite_profile": "standard",
+        "family": "zealot",
+        "identified": true,
+        "loot_table": "enemy_standard"
+    },
+    "200002": {
+        "appearance_schema_version": 3,
+        "appearances": [
+            {
+                "description": "Unidentified Appearance [0016075B]",
+                "enemy_ids": [
+                    "0016075B"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0016075A]",
+                "enemy_ids": [
+                    "0016075A"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0016075C]",
+                "enemy_ids": [
+                    "0016075C"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [001608DB]",
+                "enemy_ids": [
+                    "001608DB"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00160760]",
+                "enemy_ids": [
+                    "00160760"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0016075F]",
+                "enemy_ids": [
+                    "0016075F"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0016076B]",
+                "enemy_ids": [
+                    "0016076B"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [001608D4]",
+                "enemy_ids": [
+                    "001608D4"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [001606CA]",
+                "enemy_ids": [
+                    "001606CA"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00160618]",
+                "enemy_ids": [
+                    "00160618"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000009A]",
+                "enemy_ids": [
+                    "0000009A"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000B6]",
+                "enemy_ids": [
+                    "000000B6"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000B4]",
+                "enemy_ids": [
+                    "000000B4"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000176]",
+                "enemy_ids": [
+                    "00000176"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [002202A2]",
+                "enemy_ids": [
+                    "002202A2"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000B5]",
+                "enemy_ids": [
+                    "000000B5"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000163]",
+                "enemy_ids": [
+                    "00000163"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00440255]",
+                "enemy_ids": [
+                    "00440255"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00440254]",
+                "enemy_ids": [
+                    "00440254"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00440256]",
+                "enemy_ids": [
+                    "00440256"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000BA]",
+                "enemy_ids": [
+                    "000000BA"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000BC]",
+                "enemy_ids": [
+                    "000000BC"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000BB]",
+                "enemy_ids": [
+                    "000000BB"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00440205]",
+                "enemy_ids": [
+                    "00440205"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00440204]",
+                "enemy_ids": [
+                    "00440204"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000C0]",
+                "enemy_ids": [
+                    "000000C0"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000BF]",
+                "enemy_ids": [
+                    "000000BF"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00160666]",
+                "enemy_ids": [
+                    "00160666"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00160675]",
+                "enemy_ids": [
+                    "00160675"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0016081A]",
+                "enemy_ids": [
+                    "0016081A"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0016081B]",
+                "enemy_ids": [
+                    "0016081B"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0016081C]",
+                "enemy_ids": [
+                    "0016081C"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [001607DB]",
+                "enemy_ids": [
+                    "001607DB"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [001607DA]",
+                "enemy_ids": [
+                    "001607DA"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000C7]",
+                "enemy_ids": [
+                    "000000C7"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000C8]",
+                "enemy_ids": [
+                    "000000C8"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000014F]",
+                "enemy_ids": [
+                    "0000014F"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0044010F]",
+                "enemy_ids": [
+                    "0044010F"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0044011A]",
+                "enemy_ids": [
+                    "0044011A"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00440118]",
+                "enemy_ids": [
+                    "00440118"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [007A0003]",
+                "enemy_ids": [
+                    "007A0003"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0044011B]",
+                "enemy_ids": [
+                    "0044011B"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000014C]",
+                "enemy_ids": [
+                    "0000014C"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [006E0022]",
+                "enemy_ids": [
+                    "006E0022"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [007A0013]",
+                "enemy_ids": [
+                    "007A0013"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000E7]",
+                "enemy_ids": [
+                    "000000E7"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00440134]",
+                "enemy_ids": [
+                    "00440134"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [004401A0]",
+                "enemy_ids": [
+                    "004401A0"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [004401A1]",
+                "enemy_ids": [
+                    "004401A1"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00440139]",
+                "enemy_ids": [
+                    "00440139"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [007A0020]",
+                "enemy_ids": [
+                    "007A0020"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0044013A]",
+                "enemy_ids": [
+                    "0044013A"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000106]",
+                "enemy_ids": [
+                    "00000106"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000F0]",
+                "enemy_ids": [
+                    "000000F0"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000F1]",
+                "enemy_ids": [
+                    "000000F1"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000105]",
+                "enemy_ids": [
+                    "00000105"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000104]",
+                "enemy_ids": [
+                    "00000104"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [004600B7]",
+                "enemy_ids": [
+                    "004600B7"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [004600B8]",
+                "enemy_ids": [
+                    "004600B8"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [004600BB]",
+                "enemy_ids": [
+                    "004600BB"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [004600AD]",
+                "enemy_ids": [
+                    "004600AD"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [004601C7]",
+                "enemy_ids": [
+                    "004601C7"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [004600AC]",
+                "enemy_ids": [
+                    "004600AC"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [004600AF]",
+                "enemy_ids": [
+                    "004600AF"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [004600D8]",
+                "enemy_ids": [
+                    "004600D8"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0046019C]",
+                "enemy_ids": [
+                    "0046019C"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [004600D7]",
+                "enemy_ids": [
+                    "004600D7"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [004601C6]",
+                "enemy_ids": [
+                    "004601C6"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [002201FA]",
+                "enemy_ids": [
+                    "002201FA"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [004601BA]",
+                "enemy_ids": [
+                    "004601BA"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [002201FF]",
+                "enemy_ids": [
+                    "002201FF"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [004600E3]",
+                "enemy_ids": [
+                    "004600E3"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00400004]",
+                "enemy_ids": [
+                    "00400004"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [005400C1]",
+                "enemy_ids": [
+                    "005400C1"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000011E]",
+                "enemy_ids": [
+                    "0000011E"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000132]",
+                "enemy_ids": [
+                    "00000132"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            }
+        ],
+        "base_xp": 50,
+        "display_name": "Islander",
+        "elite_profile": "standard",
+        "family": "islander",
+        "identified": true,
+        "loot_table": "enemy_standard"
+    },
+    "200003": {
+        "appearance_schema_version": 3,
+        "appearances": [
+            {
+                "description": "Unidentified Appearance [00540066]",
+                "enemy_ids": [
+                    "00540066"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000D2]",
+                "enemy_ids": [
+                    "000000D2"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000D1]",
+                "enemy_ids": [
+                    "000000D1"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000CB]",
+                "enemy_ids": [
+                    "000000CB"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000E5]",
+                "enemy_ids": [
+                    "000000E5"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00840000]",
+                "enemy_ids": [
+                    "00840000"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000E4]",
+                "enemy_ids": [
+                    "000000E4"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0044012F]",
+                "enemy_ids": [
+                    "0044012F"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0044012E]",
+                "enemy_ids": [
+                    "0044012E"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000D0]",
+                "enemy_ids": [
+                    "000000D0"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000E6]",
+                "enemy_ids": [
+                    "000000E6"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [006E005B]",
+                "enemy_ids": [
+                    "006E005B"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00440188]",
+                "enemy_ids": [
+                    "00440188"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00440189]",
+                "enemy_ids": [
+                    "00440189"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [002201F6]",
+                "enemy_ids": [
+                    "002201F6"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            }
+        ],
+        "base_xp": 250,
+        "display_name": "Salvador",
+        "elite_profile": "standard",
+        "family": "chainsaw_bosses",
+        "identified": true,
+        "loot_table": "enemy_elite"
+    },
+    "200004": {
+        "appearance_schema_version": 3,
+        "appearances": [
+            {
+                "description": "Unidentified Appearance [004600D6]",
+                "enemy_ids": [
+                    "004600D6"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00220231]",
+                "enemy_ids": [
+                    "00220231"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            }
+        ],
+        "base_xp": 50,
+        "display_name": "Infected Wolf",
+        "elite_profile": "standard",
+        "family": "wolf",
+        "identified": true,
+        "loot_table": "enemy_elite"
+    },
+    "200005": {
+        "appearance_schema_version": 3,
+        "appearances": [
+            {
+                "description": "Unidentified Appearance [000000AC]",
+                "enemy_ids": [
+                    "000000AC"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000C9]",
+                "enemy_ids": [
+                    "000000C9"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0096001A]",
+                "enemy_ids": [
+                    "0096001A"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00440117]",
+                "enemy_ids": [
+                    "00440117"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [004601AF]",
+                "enemy_ids": [
+                    "004601AF"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [002201E6]",
+                "enemy_ids": [
+                    "002201E6"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [002201E7]",
+                "enemy_ids": [
+                    "002201E7"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [007A005B]",
+                "enemy_ids": [
+                    "007A005B"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            }
+        ],
+        "base_xp": 50,
+        "display_name": "Novistador",
+        "elite_profile": "standard",
+        "family": "novistador",
+        "identified": true,
+        "loot_table": "enemy_standard"
+    },
+    "200006": {
+        "appearance_schema_version": 3,
+        "appearances": [
+            {
+                "description": "Unidentified Appearance [00440053]",
+                "enemy_ids": [
+                    "00440053"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "base_xp_override": 1500,
+                "description": "Unidentified Appearance [00440054]",
+                "display_name_override": "Armored El Gigante",
+                "elite_profile_override": "legendary",
+                "enemy_ids": [
+                    "00440054"
+                ],
+                "family_override": "bosses",
+                "identified_override": true,
+                "identity_source": "manual",
+                "loot_table_override": "enemy_legendary",
+                "user_confirmed": true
+            }
+        ],
+        "base_xp": 1000,
+        "display_name": "El Gigante",
+        "elite_profile": "legendary",
+        "family": "bosses",
+        "identified": true,
+        "loot_table": "enemy_legendary"
+    },
+    "200008": {
+        "appearance_schema_version": 3,
+        "appearances": [
+            {
+                "description": "Unidentified Appearance [0046019E]",
+                "enemy_ids": [
+                    "0046019E"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            }
+        ]
+    },
+    "200009": {
+        "appearance_schema_version": 3,
+        "appearances": [
+            {
+                "description": "Unidentified Appearance [000002FB]",
+                "enemy_ids": [
+                    "000002FB"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000002DD]",
+                "enemy_ids": [
+                    "000002DD"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000002DF]",
+                "enemy_ids": [
+                    "000002DF"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000002DE]",
+                "enemy_ids": [
+                    "000002DE"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000002FA]",
+                "enemy_ids": [
+                    "000002FA"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000002E4]",
+                "enemy_ids": [
+                    "000002E4"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000002EA]",
+                "enemy_ids": [
+                    "000002EA"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000002EB]",
+                "enemy_ids": [
+                    "000002EB"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000002E8]",
+                "enemy_ids": [
+                    "000002E8"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000002EE]",
+                "enemy_ids": [
+                    "000002EE"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000002ED]",
+                "enemy_ids": [
+                    "000002ED"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000002EC]",
+                "enemy_ids": [
+                    "000002EC"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000002EF]",
+                "enemy_ids": [
+                    "000002EF"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000002F0]",
+                "enemy_ids": [
+                    "000002F0"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000002F5]",
+                "enemy_ids": [
+                    "000002F5"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000002F6]",
+                "enemy_ids": [
+                    "000002F6"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000002F2]",
+                "enemy_ids": [
+                    "000002F2"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000002E6]",
+                "enemy_ids": [
+                    "000002E6"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000002F4]",
+                "enemy_ids": [
+                    "000002F4"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000002E5]",
+                "enemy_ids": [
+                    "000002E5"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000002F9]",
+                "enemy_ids": [
+                    "000002F9"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000002E9]",
+                "enemy_ids": [
+                    "000002E9"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000002FE]",
+                "enemy_ids": [
+                    "000002FE"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000002FF]",
+                "enemy_ids": [
+                    "000002FF"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000301]",
+                "enemy_ids": [
+                    "00000301"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000300]",
+                "enemy_ids": [
+                    "00000300"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000304]",
+                "enemy_ids": [
+                    "00000304"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000303]",
+                "enemy_ids": [
+                    "00000303"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000302]",
+                "enemy_ids": [
+                    "00000302"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000327]",
+                "enemy_ids": [
+                    "00000327"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000328]",
+                "enemy_ids": [
+                    "00000328"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000324]",
+                "enemy_ids": [
+                    "00000324"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000003CD]",
+                "enemy_ids": [
+                    "000003CD"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000003D1]",
+                "enemy_ids": [
+                    "000003D1"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000003E2]",
+                "enemy_ids": [
+                    "000003E2"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000003E1]",
+                "enemy_ids": [
+                    "000003E1"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000003E3]",
+                "enemy_ids": [
+                    "000003E3"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000003E0]",
+                "enemy_ids": [
+                    "000003E0"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000003FD]",
+                "enemy_ids": [
+                    "000003FD"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000003FE]",
+                "enemy_ids": [
+                    "000003FE"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000407]",
+                "enemy_ids": [
+                    "00000407"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000040A]",
+                "enemy_ids": [
+                    "0000040A"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000040B]",
+                "enemy_ids": [
+                    "0000040B"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000040E]",
+                "enemy_ids": [
+                    "0000040E"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000040D]",
+                "enemy_ids": [
+                    "0000040D"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000040C]",
+                "enemy_ids": [
+                    "0000040C"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000040F]",
+                "enemy_ids": [
+                    "0000040F"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000423]",
+                "enemy_ids": [
+                    "00000423"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000424]",
+                "enemy_ids": [
+                    "00000424"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000425]",
+                "enemy_ids": [
+                    "00000425"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000421]",
+                "enemy_ids": [
+                    "00000421"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000427]",
+                "enemy_ids": [
+                    "00000427"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000426]",
+                "enemy_ids": [
+                    "00000426"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000429]",
+                "enemy_ids": [
+                    "00000429"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000042A]",
+                "enemy_ids": [
+                    "0000042A"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000428]",
+                "enemy_ids": [
+                    "00000428"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000042B]",
+                "enemy_ids": [
+                    "0000042B"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000433]",
+                "enemy_ids": [
+                    "00000433"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000432]",
+                "enemy_ids": [
+                    "00000432"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000042C]",
+                "enemy_ids": [
+                    "0000042C"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000042F]",
+                "enemy_ids": [
+                    "0000042F"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000435]",
+                "enemy_ids": [
+                    "00000435"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000042E]",
+                "enemy_ids": [
+                    "0000042E"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000436]",
+                "enemy_ids": [
+                    "00000436"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000422]",
+                "enemy_ids": [
+                    "00000422"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000431]",
+                "enemy_ids": [
+                    "00000431"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000043C]",
+                "enemy_ids": [
+                    "0000043C"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000437]",
+                "enemy_ids": [
+                    "00000437"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000438]",
+                "enemy_ids": [
+                    "00000438"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000043A]",
+                "enemy_ids": [
+                    "0000043A"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000439]",
+                "enemy_ids": [
+                    "00000439"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000043B]",
+                "enemy_ids": [
+                    "0000043B"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000041C]",
+                "enemy_ids": [
+                    "0000041C"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000041D]",
+                "enemy_ids": [
+                    "0000041D"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000041E]",
+                "enemy_ids": [
+                    "0000041E"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000446]",
+                "enemy_ids": [
+                    "00000446"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000044B]",
+                "enemy_ids": [
+                    "0000044B"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000044A]",
+                "enemy_ids": [
+                    "0000044A"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000449]",
+                "enemy_ids": [
+                    "00000449"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000044C]",
+                "enemy_ids": [
+                    "0000044C"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000044D]",
+                "enemy_ids": [
+                    "0000044D"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000044E]",
+                "enemy_ids": [
+                    "0000044E"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000451]",
+                "enemy_ids": [
+                    "00000451"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000044F]",
+                "enemy_ids": [
+                    "0000044F"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000452]",
+                "enemy_ids": [
+                    "00000452"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000453]",
+                "enemy_ids": [
+                    "00000453"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000454]",
+                "enemy_ids": [
+                    "00000454"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000455]",
+                "enemy_ids": [
+                    "00000455"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000457]",
+                "enemy_ids": [
+                    "00000457"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000456]",
+                "enemy_ids": [
+                    "00000456"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000459]",
+                "enemy_ids": [
+                    "00000459"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000045A]",
+                "enemy_ids": [
+                    "0000045A"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000460]",
+                "enemy_ids": [
+                    "00000460"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000465]",
+                "enemy_ids": [
+                    "00000465"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000462]",
+                "enemy_ids": [
+                    "00000462"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000461]",
+                "enemy_ids": [
+                    "00000461"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000468]",
+                "enemy_ids": [
+                    "00000468"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000046C]",
+                "enemy_ids": [
+                    "0000046C"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000466]",
+                "enemy_ids": [
+                    "00000466"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000046B]",
+                "enemy_ids": [
+                    "0000046B"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000046E]",
+                "enemy_ids": [
+                    "0000046E"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000471]",
+                "enemy_ids": [
+                    "00000471"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000475]",
+                "enemy_ids": [
+                    "00000475"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000473]",
+                "enemy_ids": [
+                    "00000473"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000472]",
+                "enemy_ids": [
+                    "00000472"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000476]",
+                "enemy_ids": [
+                    "00000476"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000478]",
+                "enemy_ids": [
+                    "00000478"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000477]",
+                "enemy_ids": [
+                    "00000477"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000479]",
+                "enemy_ids": [
+                    "00000479"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000047F]",
+                "enemy_ids": [
+                    "0000047F"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000047C]",
+                "enemy_ids": [
+                    "0000047C"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000047E]",
+                "enemy_ids": [
+                    "0000047E"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000047D]",
+                "enemy_ids": [
+                    "0000047D"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000047B]",
+                "enemy_ids": [
+                    "0000047B"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000491]",
+                "enemy_ids": [
+                    "00000491"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000049B]",
+                "enemy_ids": [
+                    "0000049B"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000049F]",
+                "enemy_ids": [
+                    "0000049F"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000048E]",
+                "enemy_ids": [
+                    "0000048E"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000485]",
+                "enemy_ids": [
+                    "00000485"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000481]",
+                "enemy_ids": [
+                    "00000481"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000004A5]",
+                "enemy_ids": [
+                    "000004A5"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000484]",
+                "enemy_ids": [
+                    "00000484"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000480]",
+                "enemy_ids": [
+                    "00000480"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000004A7]",
+                "enemy_ids": [
+                    "000004A7"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000482]",
+                "enemy_ids": [
+                    "00000482"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000004A6]",
+                "enemy_ids": [
+                    "000004A6"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000483]",
+                "enemy_ids": [
+                    "00000483"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000487]",
+                "enemy_ids": [
+                    "00000487"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000004AA]",
+                "enemy_ids": [
+                    "000004AA"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000004A8]",
+                "enemy_ids": [
+                    "000004A8"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000048A]",
+                "enemy_ids": [
+                    "0000048A"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000004AB]",
+                "enemy_ids": [
+                    "000004AB"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000004AD]",
+                "enemy_ids": [
+                    "000004AD"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000048D]",
+                "enemy_ids": [
+                    "0000048D"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000004BF]",
+                "enemy_ids": [
+                    "000004BF"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000048B]",
+                "enemy_ids": [
+                    "0000048B"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000048C]",
+                "enemy_ids": [
+                    "0000048C"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000489]",
+                "enemy_ids": [
+                    "00000489"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000488]",
+                "enemy_ids": [
+                    "00000488"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000048F]",
+                "enemy_ids": [
+                    "0000048F"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000004B4]",
+                "enemy_ids": [
+                    "000004B4"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000004B0]",
+                "enemy_ids": [
+                    "000004B0"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000004B1]",
+                "enemy_ids": [
+                    "000004B1"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000004B3]",
+                "enemy_ids": [
+                    "000004B3"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000486]",
+                "enemy_ids": [
+                    "00000486"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000004CF]",
+                "enemy_ids": [
+                    "000004CF"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000004CD]",
+                "enemy_ids": [
+                    "000004CD"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000004CE]",
+                "enemy_ids": [
+                    "000004CE"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000004D2]",
+                "enemy_ids": [
+                    "000004D2"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000522]",
+                "enemy_ids": [
+                    "00000522"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000004C3]",
+                "enemy_ids": [
+                    "000004C3"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000004DA]",
+                "enemy_ids": [
+                    "000004DA"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000004D9]",
+                "enemy_ids": [
+                    "000004D9"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000004DB]",
+                "enemy_ids": [
+                    "000004DB"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000053C]",
+                "enemy_ids": [
+                    "0000053C"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000541]",
+                "enemy_ids": [
+                    "00000541"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000053E]",
+                "enemy_ids": [
+                    "0000053E"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000543]",
+                "enemy_ids": [
+                    "00000543"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000540]",
+                "enemy_ids": [
+                    "00000540"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000055C]",
+                "enemy_ids": [
+                    "0000055C"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000055B]",
+                "enemy_ids": [
+                    "0000055B"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000556]",
+                "enemy_ids": [
+                    "00000556"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000554]",
+                "enemy_ids": [
+                    "00000554"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000055D]",
+                "enemy_ids": [
+                    "0000055D"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000056D]",
+                "enemy_ids": [
+                    "0000056D"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000056A]",
+                "enemy_ids": [
+                    "0000056A"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000581]",
+                "enemy_ids": [
+                    "00000581"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000057D]",
+                "enemy_ids": [
+                    "0000057D"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000580]",
+                "enemy_ids": [
+                    "00000580"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000584]",
+                "enemy_ids": [
+                    "00000584"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0022024C]",
+                "enemy_ids": [
+                    "0022024C"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000057F]",
+                "enemy_ids": [
+                    "0000057F"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000532]",
+                "enemy_ids": [
+                    "00000532"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000531]",
+                "enemy_ids": [
+                    "00000531"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000593]",
+                "enemy_ids": [
+                    "00000593"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000591]",
+                "enemy_ids": [
+                    "00000591"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000592]",
+                "enemy_ids": [
+                    "00000592"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000005B8]",
+                "enemy_ids": [
+                    "000005B8"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000005BA]",
+                "enemy_ids": [
+                    "000005BA"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000597]",
+                "enemy_ids": [
+                    "00000597"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000598]",
+                "enemy_ids": [
+                    "00000598"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000005BB]",
+                "enemy_ids": [
+                    "000005BB"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000013D]",
+                "enemy_ids": [
+                    "0000013D"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000164]",
+                "enemy_ids": [
+                    "00000164"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000599]",
+                "enemy_ids": [
+                    "00000599"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000059D]",
+                "enemy_ids": [
+                    "0000059D"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000059E]",
+                "enemy_ids": [
+                    "0000059E"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000059B]",
+                "enemy_ids": [
+                    "0000059B"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0000059A]",
+                "enemy_ids": [
+                    "0000059A"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            }
+        ],
+        "base_xp": 10,
+        "display_name": "Spider Plaga",
+        "elite_profile": "standard",
+        "family": "plagas",
+        "identified": true,
+        "loot_table": "enemy_standard"
+    },
+    "200010": {
+        "appearance_schema_version": 3,
+        "appearances": [
+            {
+                "description": "Unidentified Appearance [0000006B]",
+                "enemy_ids": [
+                    "0000006B"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000C6]",
+                "enemy_ids": [
+                    "000000C6"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000C5]",
+                "enemy_ids": [
+                    "000000C5"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [001606A5]",
+                "enemy_ids": [
+                    "001606A5"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00960019]",
+                "enemy_ids": [
+                    "00960019"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00440119]",
+                "enemy_ids": [
+                    "00440119"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [007A0002]",
+                "enemy_ids": [
+                    "007A0002"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [007A0011]",
+                "enemy_ids": [
+                    "007A0011"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0046006F]",
+                "enemy_ids": [
+                    "0046006F"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00220229]",
+                "enemy_ids": [
+                    "00220229"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0046006E]",
+                "enemy_ids": [
+                    "0046006E"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [007A000F]",
+                "enemy_ids": [
+                    "007A000F"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00220205]",
+                "enemy_ids": [
+                    "00220205"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00220204]",
+                "enemy_ids": [
+                    "00220204"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00220202]",
+                "enemy_ids": [
+                    "00220202"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [004600D3]",
+                "enemy_ids": [
+                    "004600D3"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [002201FD]",
+                "enemy_ids": [
+                    "002201FD"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000126]",
+                "enemy_ids": [
+                    "00000126"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000127]",
+                "enemy_ids": [
+                    "00000127"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [005400BF]",
+                "enemy_ids": [
+                    "005400BF"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [002202DB]",
+                "enemy_ids": [
+                    "002202DB"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00220266]",
+                "enemy_ids": [
+                    "00220266"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            }
+        ],
+        "base_xp": 125,
+        "display_name": "Bull-Head Brute",
+        "elite_profile": "standard",
+        "family": "brute",
+        "identified": true,
+        "loot_table": "enemy_elite"
+    },
+    "200011": {
+        "appearance_schema_version": 3,
+        "appearances": [
+            {
+                "description": "Unidentified Appearance [0016093B]",
+                "enemy_ids": [
+                    "0016093B"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00160939]",
+                "enemy_ids": [
+                    "00160939"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0016093A]",
+                "enemy_ids": [
+                    "0016093A"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00440206]",
+                "enemy_ids": [
+                    "00440206"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00160667]",
+                "enemy_ids": [
+                    "00160667"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00440121]",
+                "enemy_ids": [
+                    "00440121"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00440127]",
+                "enemy_ids": [
+                    "00440127"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0044013B]",
+                "enemy_ids": [
+                    "0044013B"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000DB]",
+                "enemy_ids": [
+                    "000000DB"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00440198]",
+                "enemy_ids": [
+                    "00440198"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [004601C5]",
+                "enemy_ids": [
+                    "004601C5"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00000133]",
+                "enemy_ids": [
+                    "00000133"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            }
+        ],
+        "base_xp": 1000,
+        "display_name": "Major Krauser",
+        "elite_profile": "elite",
+        "family": "bosses",
+        "identified": true,
+        "loot_table": "enemy_elite"
+    },
+    "200012": {
+        "appearance_schema_version": 3,
+        "appearances": [
+            {
+                "description": "Unidentified Appearance [00840009]",
+                "enemy_ids": [
+                    "00840009"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0044013C]",
+                "enemy_ids": [
+                    "0044013C"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00540098]",
+                "enemy_ids": [
+                    "00540098"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000EF]",
+                "enemy_ids": [
+                    "000000EF"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000EE]",
+                "enemy_ids": [
+                    "000000EE"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000F7]",
+                "enemy_ids": [
+                    "000000F7"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000F8]",
+                "enemy_ids": [
+                    "000000F8"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0046016E]",
+                "enemy_ids": [
+                    "0046016E"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [001801E3]",
+                "enemy_ids": [
+                    "001801E3"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            }
+        ],
+        "base_xp": 750,
+        "display_name": "Regenerator",
+        "elite_profile": "legendary",
+        "family": "regenerator",
+        "identified": true,
+        "loot_table": "enemy_elite"
+    },
+    "200013": {
+        "appearance_schema_version": 3,
+        "appearances": [
+            {
+                "description": "Unidentified Appearance [00160603]",
+                "enemy_ids": [
+                    "00160603"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00880008]",
+                "enemy_ids": [
+                    "00880008"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0088000F]",
+                "enemy_ids": [
+                    "0088000F"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [005C0001]",
+                "enemy_ids": [
+                    "005C0001"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            }
+        ],
+        "base_xp": 1500,
+        "display_name": "Mutated Krauser",
+        "elite_profile": "legendary",
+        "family": "bosses",
+        "identified": true,
+        "loot_table": "enemy_legendary"
+    },
+    "200015": {
+        "appearance_schema_version": 3,
+        "appearances": [
+            {
+                "description": "Unidentified Appearance [00000076]",
+                "enemy_ids": [
+                    "00000076"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [001606EC]",
+                "enemy_ids": [
+                    "001606EC"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00440168]",
+                "enemy_ids": [
+                    "00440168"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            }
+        ],
+        "base_xp": 1500,
+        "display_name": "Verdugo",
+        "elite_profile": "legendary",
+        "family": "bosses",
+        "identified": true,
+        "loot_table": "enemy_legendary"
+    },
+    "200016": {
+        "appearance_schema_version": 3,
+        "appearances": [
+            {
+                "description": "Unidentified Appearance [00160761]",
+                "enemy_ids": [
+                    "00160761"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00160762]",
+                "enemy_ids": [
+                    "00160762"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00160765]",
+                "enemy_ids": [
+                    "00160765"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "base_xp_override": 500,
+                "description": "Unidentified Appearance [00160907]",
+                "display_name_override": "Royal Armor",
+                "elite_profile_override": "elite",
+                "enemy_ids": [
+                    "00160907"
+                ],
+                "family_override": "living_armor",
+                "identified_override": true,
+                "identity_source": "manual",
+                "loot_table_override": "enemy_elite",
+                "user_confirmed": true
+            },
+            {
+                "description": "Unidentified Appearance [000000AE]",
+                "enemy_ids": [
+                    "000000AE"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [000000AD]",
+                "enemy_ids": [
+                    "000000AD"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "base_xp_override": 500,
+                "description": "Unidentified Appearance [000000E9]",
+                "display_name_override": "Royal Armor",
+                "elite_profile_override": "elite",
+                "enemy_ids": [
+                    "000000E9"
+                ],
+                "family_override": "living_armor",
+                "identified_override": true,
+                "identity_source": "manual",
+                "loot_table_override": "enemy_elite",
+                "user_confirmed": true
+            },
+            {
+                "description": "Unidentified Appearance [002201DC]",
+                "enemy_ids": [
+                    "002201DC"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            }
+        ],
+        "base_xp": 250,
+        "display_name": "Living Armor",
+        "elite_profile": "standard",
+        "family": "living_armor",
+        "identified": true,
+        "loot_table": "enemy_elite"
+    },
+    "200017": {
+        "appearance_schema_version": 3,
+        "appearances": [
+            {
+                "description": "Unidentified Appearance [001606A6]",
+                "enemy_ids": [
+                    "001606A6"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            }
+        ]
+    },
+    "200018": {
+        "appearance_schema_version": 3,
+        "appearances": [
+            {
+                "description": "Unidentified Appearance [004401AB]",
+                "enemy_ids": [
+                    "004401AB"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            }
+        ]
+    },
+    "200020": {
+        "appearance_schema_version": 3,
+        "appearances": [
+            {
+                "description": "Unidentified Appearance [001605D0]",
+                "enemy_ids": [
+                    "001605D0"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            }
+        ],
+        "base_xp": 1000,
+        "display_name": "Mendéz | Centipede",
+        "elite_profile": "legendary",
+        "family": "bosses",
+        "identified": true,
+        "loot_table": "enemy_legendary"
+    },
+    "200025": {
+        "appearance_schema_version": 3,
+        "appearances": [
+            {
+                "description": "Unidentified Appearance [0046019D]",
+                "enemy_ids": [
+                    "0046019D"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            }
+        ],
+        "base_xp": 1000,
+        "display_name": "Pesanta | U-3",
+        "elite_profile": "standard",
+        "family": "bosses",
+        "identified": true,
+        "loot_table": "enemy_standard"
+    },
+    "81105": {
+        "appearance_schema_version": 3,
+        "appearances": null,
+        "base_xp": 10,
+        "display_name": "Ganado",
+        "elite_profile": "standard",
+        "family": "ganado",
+        "identified": true,
+        "loot_table": "enemy_standard"
+    },
+    "81109": {
+        "appearance_schema_version": 3,
+        "appearances": [
+            {
+                "description": "Unidentified Appearance [002202A9]",
+                "enemy_ids": [
+                    "002202A9"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00440251]",
+                "enemy_ids": [
+                    "00440251"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [004601A1]",
+                "enemy_ids": [
+                    "004601A1"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [00440122]",
+                "enemy_ids": [
+                    "00440122"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            },
+            {
+                "description": "Unidentified Appearance [0044019F]",
+                "enemy_ids": [
+                    "0044019F"
+                ],
+                "identity_source": "provisional_observation",
+                "user_confirmed": false
+            }
+        ],
+        "base_xp": 1000,
+        "display_name": "Super Salvador",
+        "elite_profile": "legendary",
+        "family": "bosses",
+        "identified": true,
+        "loot_table": "enemy_legendary"
+    }
+}

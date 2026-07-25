@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "values": {
+    "vitality_hp_per_point": 20.0,
+    "strength_damage_per_point": 0.005,
+    "dexterity_speed_per_point": 0.005,
+    "dexterity_fire_rate_first_point": 0.002,
+    "dexterity_fire_rate_per_later_point": 0.001,
+    "agility_movement_per_point": 0.001,
+    "agility_reload_first_point": 0.002,
+    "agility_reload_per_later_point": 0.001,
+    "intelligence_healing_per_point": 0.005,
+    "luck_critical_per_point": 0.005,
+    "luck_critical_damage_per_point": 0.001,
+    "vitality_max_hp_bonus": 20160.0,
+    "strength_damage_max_multiplier": 2.5,
+    "dexterity_speed_max_multiplier": 1.5,
+    "agility_movement_max_multiplier": 1.2,
+    "dexterity_fire_rate_max_multiplier": 1.25,
+    "agility_reload_max_multiplier": 1.25,
+    "intelligence_healing_max_multiplier": 1.5,
+    "luck_critical_chance_max": 0.5,
+    "luck_critical_damage_max": 0.25
+  }
+}
