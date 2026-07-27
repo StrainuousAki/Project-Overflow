@@ -2,7 +2,7 @@
 
 ## Documentation status
 
-- **Reviewed for:** Build 49.80
+- **Reviewed for:** Build 49.81
 - **Scope:** Canonical RE Engine reflection notes
 - **Status:** active research reference
 - **Compatibility rule:** Deprecated modules, calls, and probes remain documented and callable until a dedicated removal release.

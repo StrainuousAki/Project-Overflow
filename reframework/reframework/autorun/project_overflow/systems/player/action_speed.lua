@@ -45,7 +45,11 @@ local action_speed = {
     last_base_speed = 0.0,
     last_applied_speed = 0.0,
     last_multiplier = 1.0,
-    application_status = "Waiting for player animation targets."
+    application_status = "Waiting for player animation targets.",
+    last_profile_signature = "",
+    last_player_pointer = "nil",
+    event_apply_count = 0,
+    skipped_frame_count = 0
 }
 
 action_speed.native = {
@@ -1212,7 +1216,12 @@ local function discover_player_animations(ctx, root)
 end
 
 
-local function capture_equipment_motion(ctx, equipment, source)
+local function capture_equipment_motion(
+    ctx,
+    equipment,
+    source,
+    requested_multiplier
+)
     if equipment == nil then return false end
     local motion = nil
     pcall(function()
@@ -1226,7 +1235,11 @@ local function capture_equipment_motion(ctx, equipment, source)
 
     action_speed.equipment_actions.motion_type = object_type_name(motion)
     action_speed.equipment_actions.motion_pointer = object_pointer(ctx, motion)
-    local multiplier = active_multiplier()
+    local multiplier =
+        math.max(
+            1.0,
+            tonumber(requested_multiplier) or active_multiplier()
+        )
     local layer_count = 0
     local applied_count = 0
     local apply_ok, apply_error = pcall(function()
@@ -1315,12 +1328,23 @@ local function install_equipment_action_hooks(ctx)
         if type_definition == nil then error("No chainsaw.PlayerEquipment") end
 
         local definitions = {
-            -- PlayerEquipment exposes one shared Motion tree. Writing its
-            -- layer speed from any weapon action can also accelerate walk/run,
-            -- so these hooks are diagnostic-only. Action-specific native
-            -- parameters remain the only safe speed path.
-            { names = {"execFire()", "execFire"}, counter = "fire_calls", label = "Fire", apply_layers = false },
-            { names = {"execDryFire()", "execDryFire"}, counter = "dry_fire_calls", label = "Dry fire", apply_layers = false },
+            -- Fire rate previously worked through the live PlayerEquipment
+            -- Motion/TreeLayer path. Restore that path only for execFire using
+            -- the dedicated Dexterity fire-rate multiplier. Dry-fire and
+            -- reload equipment callbacks remain diagnostic-only.
+            {
+                names = {"execFire()", "execFire"},
+                counter = "fire_calls",
+                label = "Fire",
+                apply_layers = true,
+                multiplier = "fire_rate"
+            },
+            {
+                names = {"execDryFire()", "execDryFire"},
+                counter = "dry_fire_calls",
+                label = "Dry fire",
+                apply_layers = false
+            },
             -- Reload uses the same Motion/TreeLayer collection as locomotion.
             -- Multiplying those layers leaks the reload multiplier into run
             -- speed until another action rebuilds the tree, so reload hooks
@@ -1347,10 +1371,16 @@ local function install_equipment_action_hooks(ctx)
                     local equipment = equipment_stack[#equipment_stack]
                     equipment_stack[#equipment_stack] = nil
                     if hook_definition.apply_layers == true then
+                        local multiplier =
+                            hook_definition.multiplier == "fire_rate"
+                            and fire_rate_multiplier()
+                            or active_multiplier()
+
                         capture_equipment_motion(
                             ctx,
                             equipment,
-                            hook_definition.label
+                            hook_definition.label,
+                            multiplier
                         )
                     else
                         observe_equipment_motion(
@@ -2790,6 +2820,8 @@ function action_speed.begin_native_load()
     action_speed.player_context = nil
     action_speed.player_context_ptr = "nil"
     action_speed.player_context_type = "unknown"
+    action_speed.last_player_pointer = "nil"
+    action_speed.last_profile_signature = ""
     action_speed.player_capture_status =
         "Native load reset; waiting for fresh player context."
 
@@ -2900,7 +2932,28 @@ function action_speed.scan()
     return true
 end
 
-function action_speed.update(ctx)
+local function profile_speed_signature()
+    local profile = rpg.profile()
+    local attributes =
+        type(profile) == "table"
+        and profile.attributes
+        or {}
+
+    return table.concat(
+        {
+            tostring(tonumber(attributes.dexterity) or 1),
+            tostring(tonumber(attributes.agility) or 1)
+        },
+        "|"
+    )
+end
+
+local function install_runtime_hooks(ctx)
+    -- Each installer already exits immediately after successful installation.
+    -- Keep retrying only unresolved hooks because some RE Engine types/methods
+    -- are unavailable during the first Lua frames. The failed experiment
+    -- marked the whole subsystem installed after one pass, which could leave
+    -- fire-rate or reload hooks permanently missing for the session.
     action_speed.hook_installed = true
     install_movement_userdata_hook()
     install_movement_live_capture_hooks()
@@ -2910,11 +2963,22 @@ function action_speed.update(ctx)
     install_native_hooks()
     install_weapon_param_probe(ctx)
     install_equipment_action_hooks(ctx)
-    update_movement_fields()
+
     if action_speed.scan_count == 0 then
         action_speed.scan()
     end
-    update_movement_fields()
+end
+
+function action_speed.mark_dirty(reason)
+    action_speed.last_profile_signature = ""
+    action_speed.movement.needs_apply = true
+    action_speed.application_status =
+        "Action-speed values marked dirty: "
+        .. tostring(reason or "unspecified")
+end
+
+function action_speed.update(ctx)
+    install_runtime_hooks(ctx)
 
     local object =
         ctx.state.player
@@ -2923,14 +2987,40 @@ function action_speed.update(ctx)
     if object == nil then
         action_speed.player_capture_status =
             "Waiting for PlayerCharacterContext callback; movement capture hooks remain active."
+        action_speed.skipped_frame_count =
+            action_speed.skipped_frame_count + 1
+        return false
+    end
 
-        return true
+    local pointer =
+        tostring(ctx.ptr_from_obj(object) or "nil")
+    local signature =
+        profile_speed_signature()
+
+    local player_changed =
+        pointer ~= action_speed.last_player_pointer
+    local profile_changed =
+        signature ~= action_speed.last_profile_signature
+    local movement_missing =
+        action_speed.movement.object == nil
+
+    if
+        not player_changed
+        and not profile_changed
+        and not movement_missing
+        and action_speed.movement.needs_apply ~= true
+    then
+        action_speed.skipped_frame_count =
+            action_speed.skipped_frame_count + 1
+        return false
     end
 
     capture_action_speed_player(
         ctx,
         object,
-        "shared player state"
+        player_changed
+            and "player changed"
+            or "profile changed"
     )
 
     if action_speed.movement.object == nil then
@@ -2939,20 +3029,28 @@ function action_speed.update(ctx)
 
     update_movement_fields()
 
-    local pointer = ctx.ptr_from_obj(object)
-    if pointer ~= action_speed.player_context_ptr then
+    if player_changed then
         action_speed.player_context = object
         action_speed.player_context_ptr = pointer
-        action_speed.player_context_type = ctx.type_name_from_obj(object)
-        action_speed.hook_calls = action_speed.hook_calls + 1
+        action_speed.player_context_type =
+            ctx.type_name_from_obj(object)
+        action_speed.hook_calls =
+            action_speed.hook_calls + 1
         action_speed.scan()
         discover_player_animations(ctx)
-        return true
+    elseif profile_changed then
+        -- Animation and reload/fire-rate hooks read the current RPG multiplier
+        -- when their native event fires. Only persistent movement fields need
+        -- an immediate one-time refresh here.
+        action_speed.application_status =
+            "Applied updated Dexterity/Agility profile values."
     end
 
-    if os.clock() - action_speed.last_target_scan_clock >= 1.0 then
-        discover_player_animations(ctx)
-    end
+    action_speed.last_player_pointer = pointer
+    action_speed.last_profile_signature = signature
+    action_speed.event_apply_count =
+        action_speed.event_apply_count + 1
+
     return true
 end
 

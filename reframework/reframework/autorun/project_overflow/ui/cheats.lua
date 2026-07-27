@@ -101,6 +101,42 @@ end
 
 local function draw_profile_tools(ctx, hp)
     if not imgui.tree_node("Emergency RPG Profile Tools") then return end
+
+    local active_campaign =
+        rpg.active_campaign ~= nil
+        and rpg.active_campaign()
+        or nil
+
+    local campaign_label =
+        active_campaign == "separate_ways"
+        and "Separate Ways (Ada)"
+        or (
+            active_campaign == "leon"
+            and "Main Campaign (Leon)"
+            or "Unresolved"
+        )
+
+    value("Detected Active Campaign", campaign_label)
+    value(
+        "Active RPG Identity",
+        rpg.active_save_identity ~= nil
+        and (rpg.active_save_identity() or "none")
+        or "none"
+    )
+
+    if active_campaign == nil then
+        imgui.text(
+            "Campaign unresolved. Slot binding and profile save/load tools are hidden."
+        )
+        imgui.tree_pop()
+        return
+    end
+
+    imgui.text(
+        active_campaign == "separate_ways"
+        and "Ada campaign recovery tools only."
+        or "Leon campaign recovery tools only."
+    )
     imgui.text("Cheat/recovery tools only. Normal progression saves with RE4.")
     local profile = rpg.profile()
     if imgui.button("Add Attribute Point") then
@@ -110,9 +146,19 @@ local function draw_profile_tools(ctx, hp)
     -- Native game-save synchronization is the only automatic persistence
     -- path. Keep the old change-autosave capability disabled.
     rpg.autosave_on_change = false
-    if imgui.button("Save RPG Profile") then rpg.save() end
+    local save_label =
+        active_campaign == "separate_ways"
+        and "Save Ada RPG Profile"
+        or "Save Leon RPG Profile"
+
+    local load_label =
+        active_campaign == "separate_ways"
+        and "Load Ada RPG Profile"
+        or "Load Leon RPG Profile"
+
+    if imgui.button(save_label) then rpg.save() end
     imgui.same_line()
-    if imgui.button("Load RPG Profile") then rpg.load() end
+    if imgui.button(load_label) then rpg.load() end
     if imgui.button("Reset RPG Profile") then
         stat_application.remove_vitality(ctx, hp)
         rpg.reset()
@@ -122,32 +168,48 @@ local function draw_profile_tools(ctx, hp)
     end
     imgui.separator()
     imgui.text(
-        "RPG Profile Slot Recovery"
+        active_campaign == "separate_ways"
+        and "Ada RPG Profile Slot Recovery"
+        or "Leon RPG Profile Slot Recovery"
     )
     imgui.text(
-        "Permanent debug tool: bind and load the RPG profile for the selected native save slot."
+        active_campaign == "separate_ways"
+        and "Bind/load only the Separate Ways RPG profile for the selected Ada save slot."
+        or "Bind/load only the main-campaign RPG profile for the selected Leon save slot."
     )
     imgui.text(
-        "Slot 0 = Autosave; slots 1-20 = Manual saves."
+        active_campaign == "separate_ways"
+        and "Slot 0 = Autosave; slots 1-10 = Separate Ways manual saves."
+        or "Slot 0 = Autosave; slots 1-20 = Leon manual saves."
     )
 
     local changed
+    local recovery_slot_limit =
+        rpg.manual_save_slot_limit ~= nil
+        and rpg.manual_save_slot_limit(active_campaign)
+        or (
+            active_campaign == "separate_ways"
+            and 10
+            or 20
+        )
 
     changed,
     cheats.recovery_slot =
         imgui.drag_int(
-            "RPG Profile Save Slot",
+            active_campaign == "separate_ways"
+            and "Ada RPG Profile Save Slot"
+            or "Leon RPG Profile Save Slot",
             cheats.recovery_slot,
             1,
             0,
-            20
+            recovery_slot_limit
         )
 
     cheats.recovery_slot =
         math.max(
             0,
             math.min(
-                20,
+                recovery_slot_limit,
                 cheats.recovery_slot
             )
         )
@@ -158,7 +220,9 @@ local function draw_profile_tools(ctx, hp)
         or cheats.recovery_slot
 
     value(
-        "Profile Recovery Target",
+        active_campaign == "separate_ways"
+        and "Ada Profile Recovery Target"
+        or "Leon Profile Recovery Target",
         cheats.recovery_slot == 0
         and "Autosave"
         or string.format(
@@ -168,15 +232,23 @@ local function draw_profile_tools(ctx, hp)
     )
 
     value(
-        "Current Active Slot",
+        active_campaign == "separate_ways"
+        and "Current Ada Active Slot"
+        or "Current Leon Active Slot",
         rpg.active_save_slot() or "none"
     )
 
-    if imgui.button("Bind and Load This RPG Slot") then
+    local bind_label =
+        active_campaign == "separate_ways"
+        and "Bind and Load This Ada RPG Slot"
+        or "Bind and Load This Leon RPG Slot"
+
+    if imgui.button(bind_label) then
         if
             rpg.select_save_slot(
                 recovery_key,
-                true
+                true,
+                active_campaign
             )
         then
             stat_application.reset_tracking()

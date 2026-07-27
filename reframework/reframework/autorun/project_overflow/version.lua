@@ -29,11 +29,11 @@ local project = {
         stage = "Alpha",
         major = 0,
         minor = 2,
-        patch = 1,
+        patch = 2,
 
         -- Internal development build. This can advance independently
         -- from the public semantic version above.
-        build = "49.80"
+        build = "49.81"
     },
 
     framework = "REFramework",

@@ -63,7 +63,7 @@ local last_update_time = os.clock()
 
 -- Draw the configuration window and its invisible input-capture surface.
 re.on_draw_ui(function()
-    updater.update(ctx, hp)
+    local ui_started = os.clock()
 
     ui.draw(
         ctx,
@@ -77,8 +77,17 @@ re.on_draw_ui(function()
     -- Keep an ImGui-owned surface over the painted panel while the game menu
     -- owns the native cursor. This makes ImGui request mouse capture even when
     -- Project: Overflow's configuration window is collapsed.
-    if inventory_progression.draw_input_layer ~= nil then
+    if
+        inventory_progression.draw_input_layer ~= nil
+        and inventory_progression.is_input_layer_needed ~= nil
+        and inventory_progression.is_input_layer_needed()
+    then
         inventory_progression.draw_input_layer()
+    end
+
+    if ctx.performance ~= nil then
+        ctx.performance.ui_ms =
+            (os.clock() - ui_started) * 1000.0
     end
 end)
 
@@ -94,7 +103,13 @@ re.on_frame(function()
         next_death_hook_retry = now + 1.0
     end
 
+    local save_started = os.clock()
     game_save_sync.update()
+    if ctx.performance ~= nil then
+        ctx.performance.save_sync_ms =
+            (os.clock() - save_started) * 1000.0
+    end
+
     local delta_time = now - last_update_time
     last_update_time = now
 
@@ -104,13 +119,35 @@ re.on_frame(function()
             math.min(delta_time, 0.1)
         )
 
+    local health_started = os.clock()
     updater.update(
         ctx,
         hp,
         delta_time
     )
+    if ctx.performance ~= nil then
+        ctx.performance.health_runtime_ms =
+            (os.clock() - health_started) * 1000.0
+    end
 
+    local overlay_started = os.clock()
     overlay.draw(ctx)
+    if ctx.performance ~= nil then
+        ctx.performance.overlay_ms =
+            (os.clock() - overlay_started) * 1000.0
+    end
+
+    local xp_started = os.clock()
     xp.draw(ctx)
+    if ctx.performance ~= nil then
+        ctx.performance.xp_ms =
+            (os.clock() - xp_started) * 1000.0
+    end
+
+    local progression_started = os.clock()
     inventory_progression.draw()
+    if ctx.performance ~= nil then
+        ctx.performance.progression_ms =
+            (os.clock() - progression_started) * 1000.0
+    end
 end)

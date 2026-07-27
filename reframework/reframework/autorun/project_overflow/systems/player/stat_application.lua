@@ -38,7 +38,13 @@ local application = {
 
     last_apply_succeeded = false,
     last_native_max_hp = 0,
-    last_status = "Waiting for native Max HP."
+    last_status = "Waiting for native Max HP.",
+    dirty = true,
+    last_profile_bonus = nil,
+    last_player_pointer = "nil",
+    last_audit_clock = 0.0,
+    audit_interval = 1.0,
+    skipped_update_count = 0
 }
 
 local function rounded(value)
@@ -191,6 +197,37 @@ function application.update(ctx, health_system)
     local desired_bonus =
         rounded(rpg.derived_stats().max_hp_bonus)
 
+    local player_pointer =
+        tostring(
+            ctx.state.player ~= nil
+            and ctx.ptr_from_obj(ctx.state.player)
+            or "nil"
+        )
+    local now = os.clock()
+    local profile_changed =
+        application.last_profile_bonus ~= desired_bonus
+    local player_changed =
+        application.last_player_pointer ~= player_pointer
+    local audit_due =
+        now - application.last_audit_clock
+        >= application.audit_interval
+
+    if
+        application.dirty ~= true
+        and not profile_changed
+        and not player_changed
+        and not audit_due
+    then
+        application.skipped_update_count =
+            application.skipped_update_count + 1
+        return false
+    end
+
+    application.last_profile_bonus = desired_bonus
+    application.last_player_pointer = player_pointer
+    application.last_audit_clock = now
+    application.dirty = false
+
     if not application.initialized then
         initialize(current_max_hp, desired_bonus)
     end
@@ -306,6 +343,16 @@ end
 
 function application.end_native_load()
     application.suspended = false
+    application.dirty = true
+    application.last_audit_clock = 0.0
+end
+
+function application.mark_dirty(reason)
+    application.dirty = true
+    application.last_audit_clock = 0.0
+    application.last_status =
+        "Vitality marked dirty: "
+        .. tostring(reason or "unspecified")
 end
 
 function application.reset_tracking()
@@ -316,6 +363,10 @@ function application.reset_tracking()
     application.expected_max_hp = 0
     application.last_native_max_hp = 0
     application.last_apply_succeeded = false
+    application.dirty = true
+    application.last_profile_bonus = nil
+    application.last_player_pointer = "nil"
+    application.last_audit_clock = 0.0
     application.last_status = "Tracking reset."
 end
 

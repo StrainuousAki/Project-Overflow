@@ -1,6 +1,6 @@
 PROJECT: OVERFLOW
 Resident Evil 4 Remake RPG Framework
-Alpha 0.2.1 — Build 49.80
+Alpha 0.2.2 — Build 49.81
 =====================================
 
 OVERVIEW
@@ -113,7 +113,7 @@ KNOWN LIMITATIONS
 
 VERSION
 -------
-Alpha 0.2.1 — Build 49.80
+Alpha 0.2.2 — Build 49.81
 
 Known visibility issue:
 - Build 48.41 visibility filtering was rolled back because it prevented the
@@ -525,7 +525,7 @@ state probe that does not control progression.
 Build 49.65 displays the Item Window diagnostic values directly in the
 REFramework UI instead of requiring a log file.
 
-PATCH NOTES — ALPHA 0.2.1 | BUILD 49.80
+PATCH NOTES — ALPHA 0.2.1 | BUILD 49.81
 ========================================
 - Added debugger sliders for every attribute's per-point effect at 0.001 steps.
 - Added editable maximum clamps for derived stats and destructive testing.
@@ -558,3 +558,172 @@ PATCH NOTES — ALPHA 0.2.1 | BUILD 49.80
 - Slider edits save automatically and reload with the game or script.
 - Restore Default Balance updates the JSON with shipped defaults.
 - Reload Balance JSON applies manual file edits without restarting.
+
+Alpha 0.2.2 | Build 49.81 performance and compatibility pass:
+- Removed the duplicate health runtime update from re.on_draw_ui.
+- Configuration rendering no longer performs gameplay-state updates.
+- Progression cursor/input capture is skipped unless the progression panel is visible or fading.
+- Expensive ItemWindowGuiControlBehavior managed-object enumeration is diagnostic-only and disabled by default.
+- Diagnostic item-window scans are throttled to at most once per second when explicitly enabled.
+- Added lightweight callback timing for UI, save sync, health runtime, overflow HUD, XP HUD, and progression UI.
+
+Build 49.81 event-driven stat application test:
+- Action-speed hooks are installed once instead of being rechecked every frame.
+- Dexterity and Agility persistent movement fields are reapplied only when the
+  player object changes, the profile values change, or movement data is freshly captured.
+- Fire rate, reload speed, knife speed, melee speed, and weapon-transition
+  modifiers remain native event/getter hooks and read the current profile multiplier when called.
+- Removed the recurring one-second player-animation discovery scan.
+- Vitality Max HP application is dirty/event-driven with a one-second external
+  Max HP audit to preserve yellow-herb and native Max HP change detection.
+- Native save/load and stat-tracking resets mark affected values dirty for one-time reapplication.
+
+Build 49.81 event-driven hook retry fix:
+- Retained the event-driven Dexterity/Agility and movement application experiment.
+- Removed the one-shot runtime-installed latch.
+- Unresolved native hooks now retry on later frames while successfully installed
+  hooks remain guarded by their own installed flags.
+- This specifically restores late resolution for fire-rate and reload hooks
+  without restoring continuous movement/stat writes.
+- Weapon-transition speed remains unvalidated and unchanged.
+
+Build 49.81 direct fire-event restoration:
+- Restored the previously working PlayerEquipment.execFire() application path.
+- On a real fire event, the active PlayerEquipment Motion TreeLayer speeds are
+  multiplied by the dedicated Dexterity Fire Rate multiplier.
+- Dry-fire and PlayerEquipment reload callbacks remain diagnostic-only.
+- Reload Speed remains on chainsaw.Gun.get_ReloadSpeedRate().
+- Event-driven movement, knife/melee speed, and Vitality behavior remain intact.
+- The shipped Fire Rate cap remains x1.250; historical destructive testing
+  showed sustained values above x2.0 could crash the LE 5, TMP, and CQBR.
+- Weapon-transition speed remains unvalidated and unchanged.
+
+Alpha 0.2.2 | Build 49.81 — Separate Ways profile isolation:
+- RPG profile identity is now campaign + native save slot.
+- Leon and Separate Ways use separate autosave and manual-slot profile files.
+- Native save/load request metadata is inspected before slot selection to
+  resolve Leon versus Separate Ways.
+- Existing un-namespaced profiles are treated as Leon profiles and migrated
+  into the Leon campaign folder when loaded.
+- active_save.json now records campaign, slot_key, and composite_key.
+- Separate Ways never falls back to a Leon RPG profile.
+
+Build 49.81 campaign-routing safety fix:
+- active_save.json remains a single global routing marker; it is not moved into
+  either campaign folder.
+- Returning to the main menu clears in-memory campaign confidence.
+- Save/load requests now perform a bounded reflection scan of request, manager,
+  and player objects for Leon/Ada/Separate Ways campaign evidence.
+- An unresolved campaign no longer defaults to Leon.
+- RPG save/load is skipped when campaign identity is unresolved, preventing a
+  Separate Ways slot from loading or overwriting the matching Leon slot.
+
+Build 49.81 campaign-aware debug UI:
+- RPG Save Slot Synchronization visibly shows the detected active campaign,
+  campaign key, composite campaign/slot identity, detection source, and evidence.
+- Pending and queued save/load transactions display their campaign binding.
+- Emergency RPG Profile Tools expose only the active campaign's controls.
+- Leon gameplay shows only Leon save/load and slot-binding tools.
+- Separate Ways gameplay shows only Ada save/load and slot-binding tools.
+- When campaign identity is unresolved, all profile save/load and slot-binding
+  controls are hidden.
+
+Build 49.81 definite campaign menu hooks:
+- chainsaw.GameStateMainMenu is now the explicit Leon campaign authority.
+- Separate Ways/bonus-game main-menu state candidates are hooked for enter,
+  update, and leave lifecycle methods.
+- A resolved bonus-game menu hook explicitly selects Separate Ways (Ada).
+- Leaving the Separate Ways menu retains Ada authority into gameplay.
+- Returning to the normal RE4R main menu explicitly selects Leon.
+- Native request reflection is now fallback confirmation only.
+- RPG diagnostics show which campaign menu hook/type actually resolved.
+
+Build 49.81 GameStateMainMenu campaign-method discovery:
+- Runtime evidence showed Separate Ways uses chainsaw.GameStateMainMenu on this
+  game build; guessed bonus-menu state classes did not resolve.
+- GameStateMainMenu methods are inspected once for explicit Separate Ways,
+  Another Order, Ada, DLC, or bonus-game transition/selection callbacks.
+- Resolved campaign-specific methods become authoritative Ada triggers.
+- Generic GameStateMainMenu.update() can no longer overwrite active Ada
+  authority with Leon.
+- Debug UI lists every resolved Ada method and the last one that fired.
+
+Build 49.81 exact Separate Ways menu hooks:
+- Runtime inspection confirmed the Separate Ways main-menu state is
+  chainsaw.GameStateAOMainMenu.
+- Separate Ways campaign authority now uses the exact lifecycle hooks:
+  enterInMainMenu(), update(), and leaveInMainMenu().
+- The normal campaign continues to use chainsaw.GameStateMainMenu with the
+  same lifecycle methods.
+- Guessed bonus-menu state classes and GameStateMainMenu method-name discovery
+  were removed.
+- GameStateAOMainMenu explicitly selects Separate Ways (Ada) and cannot be
+  overwritten by the normal GameStateMainMenu update hook.
+
+Build 49.81 campaign-specific native slot limits:
+- Leon uses one autosave plus manual slots 01-20.
+- Separate Ways uses one autosave plus manual slots 01-10.
+- Native request normalization now validates against the active campaign.
+- Ada slot 11-20 values are rejected and cannot bind or create RPG profiles.
+- Emergency profile recovery caps its slot selector at 10 during Separate Ways.
+- Debug slot convention visibly changes with the active campaign.
+
+Build 49.81 exact SaveDataManager slot hooks:
+- Added direct hooks for requestSaveGameData(Int32, GameSaveRequestArgs) and
+  requestLoadGameData(Int32, GameLoadRequestArgs).
+- Slot identity is captured from the explicit slotId argument before completion.
+- SaveDataUtil.getCampaignIdentifier(slotId) is used to resolve Leon versus
+  Separate Ways directly from native save metadata.
+- Completion fallback now reads SaveDataManager.TempPlayLoadData.CursorSaveData
+  including IsAutoSaveData and Slot.
+- Load fallback reads LastLoadSucceededGameSlot and LastLoadSlot.
+- Existing enqueue and completion hooks remain as compatibility fallbacks.
+
+Build 49.81 SaveDataManager completion-source correction:
+- Save/load completion callbacks provide SaveLoadMenuGuiManager, not the native
+  SaveDataManager that owns CurrentRequest, TempPlayLoadData, and last-slot data.
+- Completion fallback now reads the share.SaveDataManager singleton directly.
+- CurrentRequest is checked before cursor data and supports SlotId, SlotID,
+  Slot, lowercase, backing-field, and underscore field variants.
+- Debug UI reports the CurrentRequest source and raw slot that resolved.
+
+Build 49.81 manual-slot resolution correction:
+- The deprecated autosave-sentinel experiment has been removed.
+- Native slot -1 is invalid/unresolved and is never treated as autosave.
+- Negative CurrentRequest slots are ignored so later authoritative sources can
+  resolve the real manual slot.
+- Added requestStartSaveGameDataFlow(Int32, GameSaveRequestArgs) for direct
+  manual-slot capture.
+- Added setPlayLoadData(Boolean isAutoSave, Int32 slot), where autosave is
+  accepted only when the native Boolean explicitly reports true.
+- Native slot 0 remains the normal autosave slot.
+
+Build 49.81 Separate Ways save-slot completion fix:
+- Save/load completion now trusts the already authoritative AO campaign from
+  GameStateAOMainMenu, pending transaction state, or the active RPG profile.
+- Completion no longer re-detects and discards Separate Ways when campaign
+  identity is already known.
+- SaveDataManager hook installation now retries by simple method name when
+  REFramework does not resolve the full reflected signature.
+- Added simple-name fallbacks for requestSaveGameData, requestLoadGameData,
+  requestStartSaveGameDataFlow, setPlayLoadData, enqueueSaveRequest, and
+  enqueueLoadRequest.
+- Debug UI reports whether save completion used authoritative campaign state.
+
+Build 49.81 native integer/physical-slot correction:
+- REFramework hook Int32 arguments are decoded with sdk.to_int64/to_int32
+  before tonumber or enum fallback.
+- Direct SaveDataManager hooks can now read their real native slotId values.
+- Separate Ways physical slot mapping is normalized as:
+  100=autosave and 101-110=manual slots 01-10.
+- TempPlayLoadData is no longer used as a general save-completion fallback;
+  it is accepted only after an explicit autosave transaction.
+- Debug UI reports raw direct save/load request slot values.
+
+Build 49.81 campaign truth diagnostics and Leon authority reset:
+- GameStateMainMenu enter/update now explicitly reclaim Leon authority and clear
+  stale Separate Ways menu state.
+- Diagnostics distinguish live menu authority, active profile campaign, native
+  load campaign/slot, and exact JSON profile identity loaded.
+- Added campaign authority serial so menu transitions visibly update.
+

@@ -30,6 +30,7 @@ local save_data =
 
 local rpg = {
     last_message = "RPG profile ready.",
+    last_loaded_identity = "none",
     last_levels_gained = 0,
     autosave_on_change = false,
     campaign_initialized = false,
@@ -244,16 +245,52 @@ function rpg.active_save_slot()
     return save_data.active_slot()
 end
 
-function rpg.record_native_save_event(slot_key, operation, raw_slot)
-    return save_data.record_native_event(slot_key, operation, raw_slot)
+function rpg.active_campaign()
+    return save_data.active_campaign()
+end
+
+function rpg.active_save_identity()
+    return save_data.composite_key()
+end
+
+function rpg.manual_save_slot_limit(campaign_key)
+    return save_data.manual_slot_limit(
+        campaign_key
+    )
+end
+
+function rpg.set_active_campaign(campaign_key)
+    return save_data.set_active_campaign(campaign_key)
+end
+
+function rpg.record_native_save_event(
+    slot_key,
+    operation,
+    raw_slot,
+    campaign_key
+)
+    return save_data.record_native_event(
+        slot_key,
+        operation,
+        raw_slot,
+        campaign_key
+    )
 end
 
 function rpg.active_save_record()
     return save_data.active_record()
 end
 
-function rpg.select_save_slot(slot_key, load_profile)
-    local ok, error_text = save_data.set_active_slot(slot_key)
+function rpg.select_save_slot(
+    slot_key,
+    load_profile,
+    campaign_key
+)
+    local ok, error_text =
+        save_data.set_active_slot(
+            slot_key,
+            campaign_key
+        )
     if not ok then
         rpg.last_message = tostring(error_text)
         return false
@@ -265,15 +302,21 @@ function rpg.select_save_slot(slot_key, load_profile)
             rpg.campaign_initialized = true
             rpg.campaign_initialization_status =
                 "loaded native RPG slot "
-                .. tostring(save_data.active_slot())
-            rpg.last_message = "Loaded RPG profile for " .. tostring(save_data.active_slot()) .. "."
+                .. tostring(save_data.composite_key())
+            rpg.last_loaded_identity =
+            tostring(save_data.composite_key())
+
+        rpg.last_message =
+            "Loaded RPG profile for "
+            .. rpg.last_loaded_identity
+            .. "."
             return true
         end
         -- A new/empty game slot receives fresh progression, never another slot's data.
         player_profile.reset()
         rpg.last_levels_gained = 0
         rpg.last_message = "Started fresh RPG profile for " ..
-            tostring(save_data.active_slot()) .. ": " .. tostring(load_error)
+            tostring(save_data.composite_key()) .. ": " .. tostring(load_error)
     end
     return true
 end

@@ -990,6 +990,15 @@ ctx.ui = {
     set_max_hp = 1260,
 }
 
+ctx.performance = {
+    ui_ms = 0.0,
+    save_sync_ms = 0.0,
+    health_runtime_ms = 0.0,
+    overlay_ms = 0.0,
+    xp_ms = 0.0,
+    progression_ms = 0.0
+}
+
 ctx.gui_inspector = {
     max_depth = 4,
     selected = nil,

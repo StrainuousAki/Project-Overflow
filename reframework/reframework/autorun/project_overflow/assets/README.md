@@ -2,7 +2,7 @@
 
 ## Documentation status
 
-- **Reviewed for:** Build 49.80
+- **Reviewed for:** Build 49.81
 - **Scope:** Asset directory conventions
 - **Status:** active support reference
 - **Compatibility rule:** Existing asset names and relative paths should remain stable once referenced by a profile, shader, or renderer.

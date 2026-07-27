@@ -2,7 +2,7 @@
 
 ## Documentation status
 
-- **Reviewed for:** Build 49.80
+- **Reviewed for:** Build 49.81
 - **Scope:** Supported legacy modules, calls, hooks, and diagnostic probes
 - **Status:** authoritative maintenance reference
 - **Compatibility rule:** Entries remain available unless a future changelog explicitly announces removal.

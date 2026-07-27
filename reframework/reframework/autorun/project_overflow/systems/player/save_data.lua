@@ -1,21 +1,11 @@
 ------------------------------------------------------------
--- Maintenance classification — Build 49.39
--- Module: autorun/project_overflow/systems/player/save_data.lua
--- Role: Player RPG profile, attributes, saves, experience, and stat application.
--- Status: active subsystem.
+-- Project: Overflow — Campaign + Slot-aware RPG Save Data
 --
--- Compatibility policy:
---   Existing functions, hooks, module paths, and diagnostics are
---   intentionally retained in this maintenance pass.
---   `DEPRECATED` marks a supported legacy path, not removed code.
-------------------------------------------------------------
-
-------------------------------------------------------------
--- Project: Overflow — Slot-aware RPG Save Data
+-- Native save identity is the pair:
+--   campaign + native slot
 --
--- RE4 has twenty manual slots plus one autosave slot. Progression
--- is deliberately refused when the native slot is unknown so data
--- from separate playthroughs can never fall through to one profile.
+-- Leon and Separate Ways therefore never share RPG progression even when
+-- they use the same visible slot number.
 ------------------------------------------------------------
 
 local save_data = {}
@@ -24,11 +14,104 @@ local ROOT = "project_overflow/profiles/"
 local LEGACY_PATH = "project_overflow/player_profile.json"
 local ACTIVE_PATH = ROOT .. "active_save.json"
 local LEGACY_ACTIVE_PATH = ROOT .. "active_slot.json"
+
 local active_key = nil
+local active_campaign = nil
 local active_record = nil
 
 local function json_available()
     return json ~= nil and json.dump_file ~= nil and json.load_file ~= nil
+end
+
+local function normalize_campaign(value)
+    local text = string.lower(tostring(value or ""))
+
+    if
+        text == "separate_ways"
+        or text == "separateways"
+        or text == "another_order"
+        or text == "anotherorder"
+        or text == "ada"
+    then
+        return "separate_ways"
+    end
+
+    if
+        text == "leon"
+        or text == "main"
+        or text == "main_campaign"
+    then
+        return "leon"
+    end
+
+    return nil
+end
+
+local function manual_slot_limit(campaign_key)
+    return normalize_campaign(campaign_key) == "separate_ways"
+        and 10
+        or 20
+end
+
+local function normalize_key(key, campaign_key)
+    if key == "autosave" then
+        return "autosave"
+    end
+
+    local limit =
+        manual_slot_limit(
+            campaign_key or active_campaign
+        )
+
+    local number = tonumber(key)
+
+    if number ~= nil then
+        number = math.floor(number)
+
+        if number >= 1 and number <= limit then
+            return string.format("slot_%02d", number)
+        end
+    end
+
+    if type(key) == "string" then
+        local value = tonumber(key:match("^slot_(%d%d)$"))
+
+        if value ~= nil and value >= 1 and value <= limit then
+            return string.format("slot_%02d", value)
+        end
+    end
+
+    return nil
+end
+
+local function campaign_root(campaign_key)
+    local normalized = normalize_campaign(campaign_key)
+
+    return normalized ~= nil
+        and (ROOT .. normalized .. "/")
+        or nil
+end
+
+local function path_for(key, campaign_key)
+    campaign_key = normalize_campaign(campaign_key or active_campaign)
+    key = normalize_key(key, campaign_key)
+
+    if key == nil or campaign_key == nil then
+        return nil
+    end
+
+    return campaign_root(campaign_key)
+        .. "player_profile_"
+        .. key
+        .. ".json"
+end
+
+local function legacy_slot_path(key)
+    key = normalize_key(key, "leon")
+
+    return key ~= nil
+        and (ROOT .. "player_profile_" .. key .. ".json")
+        or nil
 end
 
 local function read_profile_file(path)
@@ -36,11 +119,9 @@ local function read_profile_file(path)
         return nil
     end
 
-    local ok,
-          result =
-        pcall(function()
-            return json.load_file(path)
-        end)
+    local ok, result = pcall(function()
+        return json.load_file(path)
+    end)
 
     if not ok or type(result) ~= "table" then
         return nil
@@ -58,7 +139,6 @@ local function profile_from_payload(payload)
         return payload.profile
     end
 
-    -- Accept early profile files that stored the profile without an envelope.
     if payload.level ~= nil then
         return payload
     end
@@ -66,60 +146,148 @@ local function profile_from_payload(payload)
     return nil
 end
 
+local function write_profile_file(path, payload)
+    if not json_available() or path == nil then
+        return false
+    end
+
+    local ok = pcall(function()
+        json.dump_file(path, payload)
+    end)
+
+    return ok
+end
+
 local function write_active_record(operation, raw_slot)
-    if not json_available() or active_key == nil then return false end
-    local native_slot_id = active_key == "autosave"
+    if
+        not json_available()
+        or active_key == nil
+        or active_campaign == nil
+    then
+        return false
+    end
+
+    local native_slot_id =
+        active_key == "autosave"
         and "00"
         or active_key:match("^slot_(%d%d)$")
+
     active_record = {
+        campaign = active_campaign,
         slot_key = active_key,
+        composite_key = active_campaign .. ":" .. active_key,
         native_slot_id = native_slot_id,
         last_native_operation = operation or "selection",
         last_native_raw_slot = raw_slot,
         updated_at = os.time()
     }
-    local ok = pcall(function() json.dump_file(ACTIVE_PATH, active_record) end)
-    return ok
+
+    return pcall(function()
+        json.dump_file(ACTIVE_PATH, active_record)
+    end)
 end
 
-local function normalize_key(key)
-    if key == "autosave" then return "autosave" end
-    local number = tonumber(key)
-    if number ~= nil then
-        number = math.floor(number)
-        if number >= 1 and number <= 20 then
-            return string.format("slot_%02d", number)
-        end
+local function migrate_legacy_leon_profile(key)
+    if normalize_campaign(active_campaign) ~= "leon" then
+        return nil
     end
-    if type(key) == "string" then
-        local value = tonumber(key:match("^slot_(%d%d)$"))
-        if value ~= nil and value >= 1 and value <= 20 then
-            return string.format("slot_%02d", value)
-        end
+
+    local destination = path_for(key, "leon")
+
+    if profile_from_payload(read_profile_file(destination)) ~= nil then
+        return read_profile_file(destination)
     end
-    return nil
+
+    local source = legacy_slot_path(key)
+    local result = read_profile_file(source)
+
+    if profile_from_payload(result) == nil then
+        return nil
+    end
+
+    local loaded_profile = profile_from_payload(result)
+
+    write_profile_file(
+        destination,
+        {
+            campaign = "leon",
+            slot_key = normalize_key(key, "leon"),
+            saved_at = tonumber(result.saved_at) or os.time(),
+            migrated_from = source,
+            profile = loaded_profile
+        }
+    )
+
+    return read_profile_file(destination) or result
 end
 
-local function path_for(key)
-    key = normalize_key(key)
-    return key ~= nil and (ROOT .. "player_profile_" .. key .. ".json") or nil
-end
+function save_data.set_active_campaign(campaign_key)
+    local normalized = normalize_campaign(campaign_key)
 
-function save_data.set_active_slot(key)
-    local normalized = normalize_key(key)
-    if normalized == nil then return false, "Invalid RPG save slot." end
-    active_key = normalized
-    write_active_record("selection", key)
+    if normalized == nil then
+        return false, "Invalid RPG campaign."
+    end
+
+    active_campaign = normalized
+
+    if active_key ~= nil then
+        write_active_record("campaign_selection", active_key)
+    end
+
     return true
 end
 
-function save_data.record_native_event(key, operation, raw_slot)
-    local normalized = normalize_key(key)
-    if normalized == nil then return false, "Invalid native RPG save slot." end
+function save_data.active_campaign()
+    return active_campaign
+end
+
+function save_data.set_active_slot(key, campaign_key)
+    local normalized_campaign =
+        normalize_campaign(campaign_key or active_campaign)
+    local normalized =
+        normalize_key(key, normalized_campaign)
+
+    if normalized == nil then
+        return false, "Invalid RPG save slot."
+    end
+
+    if normalized_campaign == nil then
+        return false, "Invalid RPG campaign."
+    end
+
+    active_campaign = normalized_campaign
     active_key = normalized
+    write_active_record("selection", key)
+
+    return true
+end
+
+function save_data.record_native_event(
+    key,
+    operation,
+    raw_slot,
+    campaign_key
+)
+    local normalized_campaign =
+        normalize_campaign(campaign_key or active_campaign)
+    local normalized =
+        normalize_key(key, normalized_campaign)
+
+    if normalized == nil then
+        return false, "Invalid native RPG save slot."
+    end
+
+    if normalized_campaign == nil then
+        return false, "Invalid native RPG campaign."
+    end
+
+    active_campaign = normalized_campaign
+    active_key = normalized
+
     if not write_active_record(operation, raw_slot) then
         return false, "Could not update active_save.json."
     end
+
     return true
 end
 
@@ -129,14 +297,31 @@ end
 
 function save_data.clear_active_slot()
     active_key = nil
+    active_campaign = nil
 end
 
 function save_data.active_slot()
     return active_key
 end
 
-function save_data.path(key)
-    return path_for(key or active_key) or "No native save slot selected"
+function save_data.composite_key(key, campaign_key)
+    local normalized_campaign =
+        normalize_campaign(campaign_key or active_campaign)
+    local normalized =
+        normalize_key(key or active_key, normalized_campaign)
+
+    if normalized == nil or normalized_campaign == nil then
+        return nil
+    end
+
+    return normalized_campaign .. ":" .. normalized
+end
+
+function save_data.path(key, campaign_key)
+    return path_for(
+        key or active_key,
+        campaign_key or active_campaign
+    ) or "No native campaign/save slot selected"
 end
 
 function save_data.legacy_path()
@@ -144,56 +329,86 @@ function save_data.legacy_path()
 end
 
 function save_data.restore_active_slot()
-    if not json_available() then return nil end
-    local ok, result = pcall(function() return json.load_file(ACTIVE_PATH) end)
+    if not json_available() then
+        return nil
+    end
+
+    local ok, result = pcall(function()
+        return json.load_file(ACTIVE_PATH)
+    end)
+
     if not ok or type(result) ~= "table" then
-        ok, result = pcall(function() return json.load_file(LEGACY_ACTIVE_PATH) end)
+        ok, result = pcall(function()
+            return json.load_file(LEGACY_ACTIVE_PATH)
+        end)
     end
-    if not ok or type(result) ~= "table" then return nil end
-    local normalized = normalize_key(result.slot_key)
-    if normalized ~= nil then
-        -- Never revive a marker whose isolated profile no longer exists.
-        -- This also repairs markers produced by older ambiguous slot mapping.
-        local profile_result =
-            read_profile_file(
-                path_for(normalized)
-            )
 
-        if
-            profile_from_payload(profile_result)
-            == nil
-        then
-            -- A stale marker must not select an empty or missing profile.
-            active_key = nil
-            active_record = nil
-            return nil
-        end
-
-        active_key = normalized
-        active_record = result
-        -- Migrate a valid legacy marker immediately.
-        if result.last_native_operation == nil then
-            write_active_record("legacy_marker_migrated", result.slot_key)
-        end
+    if not ok or type(result) ~= "table" then
+        return nil
     end
+
+    local normalized_campaign =
+        normalize_campaign(result.campaign or "leon")
+    local normalized =
+        normalize_key(result.slot_key, normalized_campaign)
+
+    if normalized == nil or normalized_campaign == nil then
+        return nil
+    end
+
+    active_campaign = normalized_campaign
+
+    local profile_result =
+        read_profile_file(
+            path_for(normalized, normalized_campaign)
+        )
+
+    if
+        profile_from_payload(profile_result) == nil
+        and normalized_campaign == "leon"
+    then
+        profile_result =
+            migrate_legacy_leon_profile(normalized)
+    end
+
+    if profile_from_payload(profile_result) == nil then
+        active_key = nil
+        active_record = nil
+        return nil
+    end
+
+    active_key = normalized
+    active_record = result
+
+    if result.campaign == nil or result.last_native_operation == nil then
+        write_active_record(
+            "legacy_marker_migrated",
+            result.slot_key
+        )
+    end
+
     return active_key
 end
 
--- Recover a lost active-slot marker only when the result is unambiguous.
--- This repairs upgrades/reinstalls that retained slot JSON files but lost
--- active_slot.json without ever borrowing progression from another slot.
 function save_data.restore_single_existing_slot()
-    if active_key ~= nil or not json_available() then return active_key end
-    local found = nil
-    for _, key in ipairs(save_data.slot_keys()) do
-        local path = path_for(key)
-        local result =
-            read_profile_file(path)
+    if active_key ~= nil or not json_available() then
+        return active_key
+    end
 
-        if
-            profile_from_payload(result)
-            ~= nil
-        then
+    -- Only auto-recover within Leon for backward compatibility. Separate Ways
+    -- must first be identified by a native save/load request.
+    active_campaign = "leon"
+
+    local found = nil
+
+    for _, key in ipairs(save_data.slot_keys("leon")) do
+        local result =
+            read_profile_file(
+                path_for(key, "leon")
+            )
+            or migrate_legacy_leon_profile(key)
+
+        if profile_from_payload(result) ~= nil then
             if found ~= nil and found ~= key then
                 return nil
             end
@@ -201,89 +416,143 @@ function save_data.restore_single_existing_slot()
             found = key
         end
     end
+
     if found ~= nil then
-        save_data.set_active_slot(found)
+        save_data.set_active_slot(found, "leon")
     end
+
     return active_key
 end
 
-function save_data.save(profile, key)
+function save_data.save(profile, key, campaign_key)
     if not json_available() then
         return false, "REFramework JSON functions are unavailable."
     end
-    local path = path_for(key or active_key)
+
+    local normalized_campaign =
+        normalize_campaign(campaign_key or active_campaign)
+    local normalized =
+        normalize_key(key or active_key, normalized_campaign)
+    local path =
+        path_for(normalized, normalized_campaign)
+
     if path == nil then
-        return false, "Native save slot is unknown; RPG save was skipped."
+        return false, "Native campaign/save slot is unknown; RPG save was skipped."
     end
+
     local payload = {
-        slot_key = normalize_key(key or active_key),
+        campaign = normalized_campaign,
+        slot_key = normalized,
+        composite_key = normalized_campaign .. ":" .. normalized,
         saved_at = os.time(),
         profile = profile
     }
-    local ok, result = pcall(function() return json.dump_file(path, payload) end)
-    if not ok then return false, tostring(result) end
+
+    local ok = write_profile_file(path, payload)
+
+    if not ok then
+        return false, "Could not write RPG profile."
+    end
+
     return true
 end
 
-function save_data.load(key)
+function save_data.load(key, campaign_key)
     if not json_available() then
         return nil, "REFramework JSON functions are unavailable."
     end
 
+    local normalized_campaign =
+        normalize_campaign(campaign_key or active_campaign)
     local normalized =
-        normalize_key(
-            key or active_key
-        )
-
+        normalize_key(key or active_key, normalized_campaign)
     local path =
-        path_for(normalized)
+        path_for(normalized, normalized_campaign)
 
     if path == nil then
-        return nil, "Native save slot is unknown; RPG load was skipped."
+        return nil, "Native campaign/save slot is unknown; RPG load was skipped."
     end
 
-    local result =
-        read_profile_file(path)
+    local result = read_profile_file(path)
+
+    if
+        profile_from_payload(result) == nil
+        and normalized_campaign == "leon"
+    then
+        result = migrate_legacy_leon_profile(normalized)
+    end
 
     if type(result) ~= "table" then
-        return nil, "No RPG profile exists for " .. normalized .. "."
+        return nil,
+            "No RPG profile exists for "
+            .. normalized_campaign
+            .. ":"
+            .. tostring(normalized)
+            .. "."
     end
 
-    local loaded_profile =
-        profile_from_payload(result)
+    local loaded_profile = profile_from_payload(result)
 
     if loaded_profile == nil then
-        return nil, "RPG profile data is invalid for " .. normalized .. "."
+        return nil,
+            "RPG profile data is invalid for "
+            .. normalized_campaign
+            .. ":"
+            .. tostring(normalized)
+            .. "."
     end
 
-    -- The filename/native event owns slot identity. Repair a renamed file or
-    -- stale envelope automatically instead of rejecting otherwise valid RPG
-    -- progression because its embedded slot_key still names the old slot.
     if
-        result.slot_key ~= normalized or
-        type(result.profile) ~= "table"
+        result.campaign ~= normalized_campaign
+        or result.slot_key ~= normalized
+        or type(result.profile) ~= "table"
     then
-        pcall(function()
-            json.dump_file(
-                path,
-                {
-                    slot_key = normalized,
-                    saved_at =
-                        tonumber(result.saved_at)
-                        or os.time(),
-                    profile = loaded_profile
-                }
-            )
-        end)
+        write_profile_file(
+            path,
+            {
+                campaign = normalized_campaign,
+                slot_key = normalized,
+                composite_key =
+                    normalized_campaign .. ":" .. normalized,
+                saved_at =
+                    tonumber(result.saved_at)
+                    or os.time(),
+                profile = loaded_profile
+            }
+        )
     end
 
     return loaded_profile
 end
 
-function save_data.slot_keys()
+function save_data.slot_keys(campaign_key)
+    local normalized_campaign =
+        normalize_campaign(campaign_key or active_campaign)
+        or "leon"
+
     local keys = { "autosave" }
-    for index = 1, 20 do keys[#keys + 1] = string.format("slot_%02d", index) end
+    local limit =
+        manual_slot_limit(normalized_campaign)
+
+    for index = 1, limit do
+        keys[#keys + 1] =
+            string.format("slot_%02d", index)
+    end
+
     return keys
+end
+
+function save_data.manual_slot_limit(campaign_key)
+    return manual_slot_limit(
+        campaign_key or active_campaign
+    )
+end
+
+function save_data.campaign_keys()
+    return {
+        "leon",
+        "separate_ways"
+    }
 end
 
 save_data.restore_active_slot()

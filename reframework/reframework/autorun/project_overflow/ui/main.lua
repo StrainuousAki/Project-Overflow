@@ -4570,6 +4570,24 @@ local function draw_xp_ring_panel()
     end
 end
 
+local function draw_performance_profiler(ctx)
+    if not imgui.tree_node("Performance Profiler") then
+        return
+    end
+
+    local perf = ctx.performance or {}
+
+    ui_value("Configuration UI (ms)", string.format("%.3f", tonumber(perf.ui_ms) or 0.0))
+    ui_value("Save Sync (ms)", string.format("%.3f", tonumber(perf.save_sync_ms) or 0.0))
+    ui_value("Health Runtime (ms)", string.format("%.3f", tonumber(perf.health_runtime_ms) or 0.0))
+    ui_value("Overflow Renderer (ms)", string.format("%.3f", tonumber(perf.overlay_ms) or 0.0))
+    ui_value("XP Renderer (ms)", string.format("%.3f", tonumber(perf.xp_ms) or 0.0))
+    ui_value("Progression UI (ms)", string.format("%.3f", tonumber(perf.progression_ms) or 0.0))
+
+    imgui.text("Values are the most recent callback duration, not GPU frame time.")
+    imgui.tree_pop()
+end
+
 local function draw_developer_panel(ctx)
     if not imgui.tree_node("Developer") then
         return
@@ -4647,6 +4665,7 @@ function ui_mod.draw(ctx, hp, hud, circle, gui, methods, shader_probe)
     -- the normal player-facing controls.
     if imgui.tree_node("Diagnostics & Maintenance") then
         draw_max_hp_commit_repair(ctx)
+        draw_performance_profiler(ctx)
         draw_developer_panel(ctx)
         imgui.tree_pop()
     end

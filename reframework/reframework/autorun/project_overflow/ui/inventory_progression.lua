@@ -133,9 +133,11 @@ panel.map_poll_status =
 panel.item_window_probe_type = nil
 panel.item_window_probe_interval =
     math.max(
-        0.15,
-        tonumber(panel.item_window_probe_interval) or 0.20
+        1.00,
+        tonumber(panel.item_window_probe_interval) or 1.00
     )
+panel.performance_diagnostics_enabled =
+    panel.performance_diagnostics_enabled == true
 panel.item_window_probe_last_time =
     tonumber(panel.item_window_probe_last_time) or 0.0
 panel.item_window_probe_calls =
@@ -1767,9 +1769,17 @@ local function apply_attache_case_visibility()
             )
 
         poll_map_gui_open()
-        poll_item_window_diagnostics(
-            busy
-        )
+        -- Full managed-object enumeration is diagnostic-only. Running it
+        -- repeatedly while the case is open can stack badly with trainers and
+        -- item-indicator scripts that inspect the same GUI controllers.
+        if panel.performance_diagnostics_enabled == true then
+            poll_item_window_diagnostics(
+                busy
+            )
+        else
+            panel.item_window_probe_status =
+                "Managed-object diagnostics disabled."
+        end
 
         local verified_items_tab =
             item_window_menu_state.update(
@@ -6237,7 +6247,20 @@ end
 -- Invoked from re.on_draw_ui, after the normal frame overlay. The proxy uses
 -- the same scaled coordinate as hit testing, so it both remains visible over
 -- the native attaché-case GUI and accurately communicates the click target.
+function panel.is_input_layer_needed()
+    return
+        panel.force_visible == true
+        or panel.items_screen_visible == true
+        or (
+            tonumber(panel.render_alpha) or 0.0
+        ) > 0.001
+end
+
 function panel.draw_input_layer()
+    if not panel.is_input_layer_needed() then
+        return
+    end
+
     panel.draw_cursor()
 end
 

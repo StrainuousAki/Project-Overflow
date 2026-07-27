@@ -1110,10 +1110,88 @@ function rpg_ui.draw(ctx)
 
     if imgui.tree_node("RPG Save Slot Synchronization") then
         local active_record = rpg.active_save_record() or {}
-        value("Active RPG Profile Slot",
-            rpg.active_save_slot() or "none")
-        value("Slot Convention",
-            "0=autosave, 1-20=manual")
+        local active_campaign =
+            rpg.active_campaign ~= nil
+            and rpg.active_campaign()
+            or nil
+        local campaign_label =
+            active_campaign == "separate_ways"
+            and "Separate Ways (Ada)"
+            or (
+                active_campaign == "leon"
+                and "Main Campaign (Leon)"
+                or "Unresolved"
+            )
+
+        value("Detected Active Campaign", campaign_label)
+        value("Campaign Key", active_campaign or "none")
+        value("Campaign Detection Source",
+            game_save_sync.campaign_detection_source or "none")
+        value("Campaign Detection Evidence",
+            game_save_sync.campaign_detection_evidence or "none")
+        value("Campaign Detection Count",
+            game_save_sync.campaign_detection_count or 0)
+        value("Campaign Menu Authority",
+            game_save_sync.campaign_menu_authority or "none")
+        value("Campaign Menu Trigger",
+            game_save_sync.campaign_menu_trigger or "none")
+        value("Campaign Authority Serial",
+            game_save_sync.campaign_authority_serial or 0)
+        value("Active Profile Campaign",
+            rpg.active_campaign ~= nil
+            and (rpg.active_campaign() or "none")
+            or "none")
+        value("Last Native Load Campaign",
+            game_save_sync.last_native_load_campaign or "none")
+        value("Last Native Load Slot",
+            game_save_sync.last_native_load_slot or "none")
+        value("Last Loaded Profile Identity",
+            rpg.last_loaded_identity ~= nil
+            and rpg.last_loaded_identity
+            or game_save_sync.last_loaded_profile_identity
+            or "none")
+        value("Leon Main Menu Hook",
+            game_save_sync.leon_menu_hook_installed == true)
+        value("Separate Ways Menu Hook",
+            game_save_sync.separate_ways_menu_hook_installed == true)
+        value("Separate Ways Resolved Type",
+            game_save_sync.separate_ways_menu_resolved_type or "none")
+        value("Separate Ways State Type",
+            game_save_sync.separate_ways_menu_resolved_type or "none")
+        value("Separate Ways Lifecycle Hooks",
+            game_save_sync.separate_ways_menu_installed_hooks or 0)
+        value("Separate Ways Hook Contract",
+            "enterInMainMenu / update / leaveInMainMenu")
+        value("Separate Ways Installed Hooks",
+            game_save_sync.separate_ways_menu_installed_hooks or 0)
+        value("Separate Ways Menu Active",
+            game_save_sync.separate_ways_menu_active == true)
+        value("Separate Ways Menu Events",
+            game_save_sync.separate_ways_menu_events or 0)
+
+        if active_campaign == nil then
+            imgui.text(
+                "Campaign unresolved: campaign-specific slot data is hidden."
+            )
+            value("Status", game_save_sync.status)
+            imgui.tree_pop()
+        else
+            value(
+                active_campaign == "separate_ways"
+                and "Ada RPG Profile Slot"
+                or "Leon RPG Profile Slot",
+                rpg.active_save_slot() or "none"
+            )
+            value("Active Composite Identity",
+                rpg.active_save_identity ~= nil
+                and (rpg.active_save_identity() or "none")
+                or "none")
+        value(
+            "Slot Convention",
+            active_campaign == "separate_ways"
+            and "0=autosave, 1-10=manual"
+            or "0=autosave, 1-20=manual"
+        )
         value("Last Native Operation",
             active_record.last_native_operation or "none")
         value("Last Native Raw SlotId",
@@ -1128,20 +1206,60 @@ function rpg_ui.draw(ctx)
             game_save_sync.last_resolved_load_slot or "none")
         value("Menu Cursor Hooks",
             "disabled: cyclic navigation only")
+        value("Pending Save Campaign",
+            game_save_sync.pending_campaign or active_campaign)
         value("Pending Save Transaction Slot",
             game_save_sync.pending_slot or "none")
         value("Pending Save Raw SlotId",
             game_save_sync.pending_raw_slot or "none")
+        value("Queued RPG Save Campaign",
+            game_save_sync.queued_save_campaign or active_campaign)
         value("Queued RPG Save Slot",
             game_save_sync.queued_save_slot or "none")
+        value("Locked Load Campaign",
+            game_save_sync.pending_load_request_campaign or active_campaign)
         value("Locked Load Transaction Slot",
             game_save_sync.pending_load_request_slot or "none")
         value("Locked Load Raw SlotId",
             game_save_sync.pending_load_request_raw_slot or "none")
+        value("Queued RPG Load Campaign",
+            game_save_sync.queued_load_campaign or active_campaign)
         value("Queued RPG Load Slot",
             game_save_sync.queued_load_slot or "none")
         value("Load Delay Frames", game_save_sync.load_delay_frames)
         value("Installed Hooks", game_save_sync.installed_hooks)
+        value("Direct Save Flow Hook",
+            game_save_sync.direct_save_flow_hook_installed == true)
+        value("setPlayLoadData Hook",
+            game_save_sync.set_play_load_data_hook_installed == true)
+        value("Last Direct Flow Raw Slot",
+            game_save_sync.last_direct_flow_raw_slot or "none")
+        value("Last setPlayLoadData Slot",
+            game_save_sync.last_set_play_load_slot or "none")
+        value("Last setPlayLoadData Autosave",
+            game_save_sync.last_set_play_load_is_autosave)
+        value("Ignored Negative Request Slots",
+            game_save_sync.ignored_negative_request_slots or 0)
+        value("Save Completion Used Authoritative Campaign",
+            game_save_sync.save_completion_used_authoritative_campaign == true)
+        value("Direct Save Request Hook",
+            game_save_sync.direct_save_request_hook_installed == true)
+        value("Direct Save Request Raw Slot",
+            game_save_sync.last_direct_save_request_raw_slot or "none")
+        value("Direct Load Request Hook",
+            game_save_sync.direct_load_request_hook_installed == true)
+        value("Direct Load Request Raw Slot",
+            game_save_sync.last_direct_load_request_raw_slot or "none")
+        value("Last Campaign Identifier",
+            game_save_sync.last_campaign_identifier or "none")
+        value("Cursor Save Slot",
+            game_save_sync.last_cursor_slot or "none")
+        value("Cursor Is Autosave",
+            game_save_sync.last_cursor_is_autosave)
+        value("Current Request Slot Source",
+            game_save_sync.last_current_request_source or "none")
+        value("Current Request Raw Slot",
+            game_save_sync.last_current_request_raw_slot or "none")
         value("Save Request Hook",
             game_save_sync.save_request_hook_installed == true)
         value("Load Request Hook",
@@ -1197,7 +1315,8 @@ function rpg_ui.draw(ctx)
             game_save_sync.last_new_game_reset)
         value("Skipped Unsafe Events", game_save_sync.skipped_events)
         value("Status", game_save_sync.status)
-        imgui.tree_pop()
+            imgui.tree_pop()
+        end
     end
 
     if imgui.tree_node("Action Speed Hook") then
