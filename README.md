@@ -106,6 +106,3 @@ Everyone following, supporting, and helping improve the project
 Project: Overflow is not affiliated with or endorsed by Capcom.
 All trademarks, characters, and original game assets belong to their respective owners.
 
-Current public build: 0.2.1 Alpha
-
-Current internal build: 49.80
